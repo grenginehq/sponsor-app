@@ -16,20 +16,11 @@
   align-items: center;
 }
 
-.first_button {
-  width: 220px;
-  height: 50px;
-  background-color: #f2f2f7;
-  color: #000000;
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-}
 .second_button {
   width: 150px;
   height: 50px;
   border: none;
-  background-color: #6247aa;
+  background-color: var(--primary);
   color: #e2cfea;
   border-radius: 50px;
   font-size: 12px;
@@ -42,7 +33,7 @@
 }
 .heading {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
 }
 .heading_container {

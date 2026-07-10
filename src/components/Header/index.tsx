@@ -3,8 +3,8 @@ import styles from "./header.module.css";
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.left_container}>
-        <div className={styles.first_container}>
+      <div className={styles.header_navigation}>
+      <div className={styles.logo_container}>
           <p className={styles.logo}>Sponsor</p>
           <div className={styles.line} />
         </div>
@@ -16,7 +16,8 @@ export const Header = () => {
           <a>Contact Us</a>
         </nav>
       </div>
-      <button className={styles.header_button}>Be a Sponsor</button>
+      
+      {/* <button className={styles.header_button}>Be a Sponsor</button> */}
     </header>
   );
 };
