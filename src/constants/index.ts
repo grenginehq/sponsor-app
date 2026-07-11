@@ -62,3 +62,26 @@ export const cards = [
       "A historic building on Edinburgh's Princes Street has been badly  damaged in a significant fire. Firefighters were sent to the disused site at the old Debenhams building at about 02:50 and worked through the early hours to bring the flames under control.",
   },
 ];
+
+export const projectCategories = [{
+  label: "Medical",
+  value: "MEDICAL"
+}, {
+  label: "Burial",
+  value: "BURIAL"
+}, {
+  label: "Cycle Marathon",
+  value: "CYCLE_MARATHON"
+}, {
+  label: "Banquet",
+  value: "BANQUET"
+}, {
+  label: "Community Outreach",
+  value: "COMMUNITY_OUTREACH"
+}, {
+  label: "Weddings",
+  value: "WEDDINGS"
+}, {
+    label: "Naming Ceremony",
+    value: "NAMING"
+}]

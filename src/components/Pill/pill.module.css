@@ -1,11 +1,10 @@
-
 .pill {
-    padding: 16px 32px;
-    display: flex;
-    align-items: center;
-    background-color: #f2f2f7;
-    color: var(--black);
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: 500;
-  }
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f7;
+  color: var(--black);
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+}

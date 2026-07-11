@@ -24,9 +24,8 @@ export const Hero = () => {
       </div>
       <section className={styles.grid_container}>
         {images.map((image, index) => (
-          <div className={styles.hero_image} key={index}>
+          <div key={index + 1} className={styles.hero_image}>
             <Image
-              key={index + 1}
               src={image.src}
               alt={image.alt}
               fill
