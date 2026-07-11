@@ -16,16 +16,6 @@
   align-items: center;
 }
 
-.second_button {
-  width: 150px;
-  height: 50px;
-  border: none;
-  background-color: var(--primary);
-  color: #e2cfea;
-  border-radius: 50px;
-  font-size: 12px;
-}
-
 .description {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.4);

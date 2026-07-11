@@ -1,3 +1,4 @@
+import { Button } from "../Button";
 import { Header } from "../Header";
 import { Pill } from "../Pill";
 import styles from "./hero.module.css";
@@ -15,6 +16,7 @@ export const Hero = () => {
           Help us bring our project to life while making impact <br />
           to the community at large.
         </p>
+        <Button type="button" variant="primary" label="Be a Sponsor" />
       </div>
     </div>
   );

@@ -23,21 +23,10 @@
   height: 20px;
 }
 
-.header_button {
-  width: 130px;
-  border-radius: 50px;
-  border: none;
-  height: 50px;
-  text-align: center;
-  background: var(--secondary01);
-  color: var(--secondary02);
-  font-weight: 400;
-  font-size: 14px;
-}
 .nav {
   display: flex;
   gap: space-between;
-  gap: 48px;
+  gap: 32px;
   align-items: center;
   justify-content: center;
   width: 100%;

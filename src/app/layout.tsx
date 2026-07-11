@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Instrument_Sans, Instrument_Serif, Inter } from "next/font/google";
-import "./styles/reset.css";
+import "../styles/reset.css";
 
 const inter = Inter({
   variable: "--font-inter",

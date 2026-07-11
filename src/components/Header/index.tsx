@@ -1,3 +1,5 @@
+import { Button } from "../Button";
+import { Icon } from "../Icon";
 import styles from "./header.module.css";
 
 export const Header = () => {
@@ -8,16 +10,15 @@ export const Header = () => {
           <p className={styles.logo}>Sponsor</p>
           <div className={styles.line} />
         </div>
-
+        
         <nav className={styles.nav}>
-          <p>S</p>
+          <Icon icon="search" />
           <a>About </a>
           <a>Community</a>
           <a>Contact Us</a>
         </nav>
       </div>
-      
-      {/* <button className={styles.header_button}>Be a Sponsor</button> */}
+      <Button variant="secondary" type="button" label="Be a Sponsor" />
     </header>
   );
 };
