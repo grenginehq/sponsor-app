@@ -12,13 +12,15 @@ export const Header = () => {
         </div>
 
         <nav className={styles.nav}>
-          <p>S</p>
+          <Icon icon="search" />
           <a>About </a>
           <a>Community</a>
           <a>Contact Us</a>
         </nav>
       </div>
-      <button className={styles.header_button}>Be a Sponsor</button>
+      <Button type="button" variant="secondary">
+        Become a Sponsor
+      </Button>
     </header>
   );
 };
