@@ -6,11 +6,7 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.header_navigation}>
-        <div className={styles.logo_container}>
-          <p className={styles.logo}>Sponsor</p>
-          <div className={styles.line} />
-        </div>
-
+        <Icon icon="logo" />
         <nav className={styles.nav}>
           <Icon icon="search" />
           <a>About </a>
