@@ -22,6 +22,7 @@
   &:hover {
     border: 1px solid var(--primary);
     color: var(--primary);
+    background-color: transparent;
   }
 }
 
