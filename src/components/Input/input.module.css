@@ -1,0 +1,36 @@
+.input_container {
+  --border-color: rgba(180, 180, 180, 0.5);
+
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  border: 1px solid var(--border-color);
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14.1px;
+  line-height: 20.02px;
+  letter-spacing: 1.68px;
+  vertical-align: middle;
+  color: var(--primary);
+
+  &::placeholder {
+    color: var(--b);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+  }
+}

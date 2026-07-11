@@ -1,12 +1,14 @@
 import styles from "./page.module.css";
-import Hero from "../components/Hero";
+import { Hero } from "../components/Hero";
+import { Button } from "@/components/Button";
+import { Header } from "@/components/Header";
 export default function Home() {
   return (
     <div className={styles.main_container}>
+      <Header />
       <Hero />
-      <div className={styles.images}></div>
       <div className={styles.purpose_container}>
-        <div className={styles.left_container}>
+        <div className={styles.purpose_text_container}>
           <div>
             <p className={styles.purpose_title}>THE APP</p>
             <h1 className={styles.purpose_heading}>
@@ -26,7 +28,7 @@ export default function Home() {
             matters <br />
             most.
           </p>
-          <button className={styles.purpose_button}>Start Now</button>
+          <Button variant="primary" type="button" label="Start Now"/>
         </div>
       </div>
       <div className={styles.prospective_container}>

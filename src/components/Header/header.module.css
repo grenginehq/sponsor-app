@@ -1,18 +1,17 @@
 .header {
-  height: 100px;
+  height: 70px;
   align-items: center;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0px 48px;
 }
-.left_container {
-  width: 700px;
+
+.logo_container {
   display: flex;
-  justify-content: space-between;
-}
-.first_container {
-  width: 200px;
-  display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
 }
 .logo {
   color: #000;
@@ -21,25 +20,14 @@
 
 .line {
   width: 1px;
-  background: #000;
+  background: var(--black);
   height: 20px;
 }
 
-.header_button {
-  width: 130px;
-  border-radius: 50px;
-  border: none;
-  height: 50px;
-  text-align: center;
-  background: #dadafe;
-  color: #7a7add;
-  font-weight: 400;
-  font-size: 14px;
-}
 .nav {
   display: flex;
   gap: space-between;
-  gap: 48px;
+  gap: 32px;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -47,4 +35,9 @@
 .link {
   font-size: 16px;
   color: #00000066;
+}
+.header_navigation {
+  display: flex;
+  gap: 48px;
+  align-items: center;
 }
