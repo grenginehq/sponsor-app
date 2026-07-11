@@ -3,11 +3,13 @@ import { Hero } from "../components/Hero";
 import { Button } from "@/components/Button";
 import { Header } from "@/components/Header";
 import { Icon } from "@/components/Icon";
-
+import Image from "next/image";
+import { cards, images } from "@/constants";
 export default function Home() {
   return (
     <div className={styles.main_container}>
       <Header />
+      <div></div>
       <Hero />
       <section className={styles.purpose_container}>
         <div className={styles.purpose_text_container}>
@@ -40,7 +42,48 @@ export default function Home() {
         <h1 className={styles.perpective_heading}>
           Perspectives from Our Partners
         </h1>
+        <div className={styles.perspective_image_container}>
+          <div>
+            <h1 className={styles.perspective_title}>Sandara Opoku</h1>
+            <p>Joined 2017</p>
+          </div>
+          <div className={styles.perspective_image}>
+            <Image
+              src="/assets/images/partner.png"
+              alt="partner"
+              fill
+              style={{ objectFit: "cover", borderRadius: "50px" }}
+            />
+          </div>
+        </div>
       </div>
+      <section className={styles.news_container}>
+        <div className={styles.news_top_container}>
+          <h1 className={styles.news_heading}>In the News</h1>
+          <Button variant="primary" type="button">
+            Read all stories
+          </Button>
+        </div>
+        <div className={styles.news_cards_container}>
+          {cards.map((card, index) => (
+            <div className={styles.news_card} key={index + 1}>
+              <div className={styles.news_card_image_container}>
+                <Image
+                  src={card.image}
+                  alt={card.alt}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <div className={styles.news_card_text_container}>
+                <h1 className={styles.news_card_heading}>{card.title}</h1>
+                <p className={styles.news_card_title}>{card.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className={styles.project_container}></section>
     </div>
   );
 }
