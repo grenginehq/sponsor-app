@@ -1,6 +1,8 @@
+import { images } from "@/constants";
 import { Button } from "../Button";
 import { Pill } from "../Pill";
 import styles from "./hero.module.css";
+import Image from "next/image";
 
 export const Hero = () => {
   return (
@@ -16,7 +18,18 @@ export const Hero = () => {
         </p>
         <Button type="button" variant="primary" label="Be a Sponsor" />
       </div>
-      <div className={styles.images}></div>
-    </div>
+      <section className={styles.grid_container}>
+        {images.map((image, index) => (
+          <div className={styles.hero_image}>
+            <Image
+              key={index + 1}
+              src={image.src}
+              alt={image.alt}
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+        ))}
+      </section>    </div>
   );
 }

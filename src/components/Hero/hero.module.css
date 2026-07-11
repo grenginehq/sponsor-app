@@ -33,9 +33,14 @@
   font-family: var(--font-instrument-serif);
   font-style: italic;
 }
-.images {
-  display: flex;
-  gap: 18px;
-  background-color: red;
-  height: 150px;
+
+.grid_container {
+  display: grid;
+  gap: 16px;
+  height: auto;
+  grid-template-columns: repeat(7, 1fr);
+}
+.hero_image {
+  position: relative;
+  height: 200px;
 }

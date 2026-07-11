@@ -3,54 +3,12 @@ import { Hero } from "../components/Hero";
 import { Button } from "@/components/Button";
 import { Header } from "@/components/Header";
 import { Icon } from "@/components/Icon";
-import Image from "next/image";
+
 export default function Home() {
-  const images = [
-    {
-      src: "/assets/images/old_woman.png",
-      alt: "Old woman",
-    },
-    {
-      src: "/assets/images/children.png",
-      alt: "Children",
-    },
-    {
-      src: "/assets/images/cyclist.png",
-      alt: "cyclists",
-    },
-    {
-      src: "/assets/images/wedding.png",
-      alt: "wedding",
-    },
-    {
-      src: "/assets/images/birthday.png",
-      alt: "birthday",
-    },
-    {
-      src: "/assets/images/family.png",
-      alt: "family",
-    },
-    {
-      src: "/assets/images/students.png",
-      alt: "students",
-    },
-  ];
   return (
     <div className={styles.main_container}>
       <Header />
       <Hero />
-      <section className={styles.grid_container}>
-        {images.map((image) => (
-          <div className={styles.image}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-        ))}
-      </section>
       <section className={styles.purpose_container}>
         <div className={styles.purpose_text_container}>
           <div>
@@ -78,8 +36,8 @@ export default function Home() {
           <Button variant="primary" type="button" label="Start Now" />
         </div>
       </section>
-      <div className={styles.prospective_container}>
-        <h1 className={styles.prospective_heading}>
+      <div className={styles.perspective_container}>
+        <h1 className={styles.perpective_heading}>
           Perspectives from Our Partners
         </h1>
       </div>

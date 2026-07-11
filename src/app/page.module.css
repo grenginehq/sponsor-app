@@ -3,21 +3,9 @@
   flex-direction: column;
   gap: 80px;
 }
-.grid_container {
-  display: grid;
-  gap: 16px;
-  height: auto;
-  grid-template-columns: repeat(7, 1fr);
-}
-.image {
-  position: relative;
-  height: 200px;
-}
 
 .purpose_container {
-  width: 1200px;
-  max-width: 1200px;
-  margin: auto;
+  padding: 126px 48px 0px 48px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -49,21 +37,20 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-items: start;
 }
 
 .title {
   font-size: 14px;
 }
-.prospective_container {
-  width: 1200px;
-  max-width: 1200px;
-  margin: auto;
+.perspective_container {
   /* text-align: center; */
   align-items: center;
   flex-direction: column;
   display: flex;
+  padding-top: calc(200px - 80px);
 }
-.prospective_heading {
+.perspective_heading {
   font-size: 36px;
   /* text-align: center; */
 }
