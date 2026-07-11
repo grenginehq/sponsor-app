@@ -11,12 +11,12 @@ export const Header = () => {
 
         <nav className={styles.nav}>
           <p>S</p>
-          <a>About </a>
-          <a>Community</a>
-          <a>Contact Us</a>
+          <a className={styles.link}>About </a>
+          <a className={styles.link}>Community</a>
+          <a className={styles.link}>Contact Us</a>
         </nav>
       </div>
-      <button className={styles.header_button}>Be a Sponsor</button>
+      <button className={styles.header_button}>Be a sponsor</button>
     </header>
   );
 };
