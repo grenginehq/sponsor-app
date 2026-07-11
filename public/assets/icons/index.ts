@@ -46,4 +46,10 @@ export const icons: Record<IconNames, string> = {
 <path d="M1.00012 5.87841C1.94156 6.56309 3.82445 8.44598 4.59472 9.72976C5.53616 7.67571 7.93255 3.05409 10.5001 1.00003" stroke="#7A7ADD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 `,
+  arrowdown: `
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.22353 9L8.90588 8.90588L9 2.22353M8.90588 8.90588L1 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+`,
 };

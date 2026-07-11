@@ -76,14 +76,31 @@ export default function Home() {
                 />
               </div>
               <div className={styles.news_card_text_container}>
-                <h1 className={styles.news_card_heading}>{card.title}</h1>
-                <p className={styles.news_card_title}>{card.description}</p>
+                <div>
+                  <h1 className={styles.news_card_heading}>{card.title}</h1>
+                  <p className={styles.news_card_title}>{card.description}</p>
+                </div>
+                <button className={styles.news_card_button}>
+                  <Icon icon="arrowdown" />
+                </button>
               </div>
             </div>
           ))}
         </div>
       </section>
-      <section className={styles.project_container}></section>
+      <section className={styles.project_container}>
+        <div className={styles.project_text_container}>
+          <h1 className={styles.project_text_container_heading}>
+            Start a sponsor project
+          </h1>
+          <p className={styles.project_text_container_title}>
+            Make a difference by choosing a project to start with
+          </p>
+          <Button type="button" variant="primary">
+            Start a project now
+          </Button>
+        </div>
+      </section>
     </div>
   );
 }

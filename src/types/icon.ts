@@ -1,1 +1,7 @@
-export type IconNames = "search" | "logo" | "fundraiser" | "giftaid" | "tick";
+export type IconNames =
+  | "search"
+  | "logo"
+  | "fundraiser"
+  | "giftaid"
+  | "tick"
+  | "arrowdown";
