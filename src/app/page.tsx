@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       </section>
       <div className={styles.perspective_container}>
-        <h1 className={styles.perpective_heading}>
+        <h1 className={styles.perspective_heading}>
           Perspectives from Our Partners
         </h1>
         <div className={styles.perspective_image_container}>
@@ -50,7 +50,7 @@ export default function Home() {
           </div>
           <div className={styles.perspective_image}>
             <Image
-              src="/assets/images/partner.png"
+              src="/assets/images/partner.jpg"
               alt="partner"
               fill
               style={{ objectFit: "cover", borderRadius: "50px" }}
@@ -61,9 +61,7 @@ export default function Home() {
       <section className={styles.news_container}>
         <div className={styles.news_top_container}>
           <h1 className={styles.news_heading}>In the News</h1>
-          <Button variant="primary" type="button">
-            Read all stories
-          </Button>
+          <Button variant="primary" type="button" label="Read all stories" />
         </div>
         <div className={styles.news_cards_container}>
           {cards.map((card, index) => (
