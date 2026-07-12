@@ -1,8 +1,10 @@
+"use client";
 import { images } from "@/constants";
 import { Button } from "../Button";
 import { Pill } from "../Pill";
 import styles from "./hero.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
@@ -22,18 +24,30 @@ export const Hero = () => {
         </p>
         <Button type="button" variant="primary" label="Be a Sponsor" />
       </div>
-      <section className={styles.grid_container}>
-        {images.map((image, index) => (
-          <div key={index + 1} className={styles.hero_image}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-        ))}
-      </section>{" "}
+      <motion.section
+        animate={{
+          x: ["0%", "-50%"],
+        }}
+        transition={{
+          ease: "linear",
+          duration: 20,
+          repeat: Infinity,
+        }}
+        className={styles.grid_container}
+      >
+        <div className={styles.marquee_track}>
+          {[...images, ...images].map((image, index) => (
+            <div key={index + 1} className={styles.hero_image}>
+              <Image
+                src={image.src}
+                fill
+                alt={image.alt}
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          ))}
+        </div>
+      </motion.section>{" "}
     </div>
   );
 };

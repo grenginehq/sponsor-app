@@ -1,9 +1,10 @@
 .hero_container {
-  height: calc(100vh - 140px);
+  min-height: calc(100vh - 140px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 48px;
+  overflow: hidden;
 }
 
 .inner_container {
@@ -36,12 +37,21 @@
 }
 
 .grid_container {
-  display: grid;
-  gap: 16px;
+  position: relative;
+  width: 100%;
   height: auto;
-  grid-template-columns: repeat(7, 1fr);
+  padding: 16px 0;
 }
+
+.marquee_track {
+  display: flex;
+  gap: 16px;      
+  width: max-content; 
+}
+
 .hero_image {
   position: relative;
-  height: 200px;
+  height: 200px; 
+  width: 200px;   
+  flex-shrink: 0; 
 }

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Control, useController } from "react-hook-form";
 import styles from "./action_pill.module.css";
 import { useState } from "react";

@@ -19,13 +19,13 @@
   align-items: center;
 }
 
-.sponsor_form_image{
+.sponsor_form_image {
   position: relative;
   width: 100%;
   height: 100%;
   border-radius: 50px;
 
-  & img{
+  & img {
     border-radius: 50px;
   }
 }
