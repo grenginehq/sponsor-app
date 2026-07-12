@@ -40,7 +40,7 @@ export const Hero = () => {
         className={styles.grid_container}
       >
         <div className={styles.marquee_track}>
-          {[...images, ...images].map((image, index) => (
+          {images.concat(images).map((image, index) => (
             <div key={index + 1} className={styles.hero_image}>
               <Image
                 src={image.src}

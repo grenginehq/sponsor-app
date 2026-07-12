@@ -67,42 +67,42 @@ export const cards = [
 
 export const projectCategories = [
   {
-    image: icons.medical,
+    icon: "medical",
     label: "Medical",
     value: "MEDICAL",
   },
   {
-    image: icons.burial,
+    icon: "burial",
     label: "Burial",
     value: "BURIAL",
   },
   {
-    image: icons.cycle,
+    icon: "cycle",
     label: "Cycle Marathon",
     value: "CYCLE_MARATHON",
   },
   {
-    image: icons.banquet,
+    icon: "banquet",
     label: "Banquet",
     value: "BANQUET",
   },
   {
-    image: icons.outreach,
+    icon: "outreach",
     label: "Community Outreach",
     value: "COMMUNITY_OUTREACH",
   },
   {
-    image: icons.weddings,
+    icon: "weddings",
     label: "Weddings",
     value: "WEDDINGS",
   },
   {
-    image: icons.building,
+    icon: "building",
     label: "Building",
     value: "BUILDING",
   },
   {
-    image: icons.naming,
+    icon: "naming",
     label: "Naming Ceremony",
     value: "NAMING",
   },
