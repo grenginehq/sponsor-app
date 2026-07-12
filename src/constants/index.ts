@@ -1,3 +1,5 @@
+import { Icon } from "@/components/Icon";
+import { icons } from "../../public/assets/icons";
 export const images = [
   {
     src: "/assets/images/old_woman.png",
@@ -63,25 +65,47 @@ export const cards = [
   },
 ];
 
-export const projectCategories = [{
-  label: "Medical",
-  value: "MEDICAL"
-}, {
-  label: "Burial",
-  value: "BURIAL"
-}, {
-  label: "Cycle Marathon",
-  value: "CYCLE_MARATHON"
-}, {
-  label: "Banquet",
-  value: "BANQUET"
-}, {
-  label: "Community Outreach",
-  value: "COMMUNITY_OUTREACH"
-}, {
-  label: "Weddings",
-  value: "WEDDINGS"
-}, {
+export const projectCategories = [
+  {
+    image: icons.medical,
+    label: "Medical",
+    value: "MEDICAL",
+  },
+  {
+    image: icons.burial,
+    label: "Burial",
+    value: "BURIAL",
+  },
+  {
+    image: icons.cycle,
+    label: "Cycle Marathon",
+    value: "CYCLE_MARATHON",
+  },
+  {
+    image: icons.banquet,
+    label: "Banquet",
+    value: "BANQUET",
+  },
+  {
+    image: icons.outreach,
+    label: "Community Outreach",
+    value: "COMMUNITY_OUTREACH",
+  },
+  {
+    image: icons.weddings,
+    label: "Weddings",
+    value: "WEDDINGS",
+  },
+  {
+    image: icons.building,
+    label: "Building",
+    value: "BUILDING",
+  },
+  {
+    image: icons.naming,
     label: "Naming Ceremony",
-    value: "NAMING"
-}]
+    value: "NAMING",
+  },
+];
+
+export const inputLists = ["Name", "Email Address", "Message"];

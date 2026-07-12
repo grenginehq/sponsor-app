@@ -4,7 +4,8 @@ import { Button } from "@/components/Button";
 import { Header } from "@/components/Header";
 import { Icon } from "@/components/Icon";
 import Image from "next/image";
-import { cards, images } from "@/constants";
+import { cards, inputLists, projectCategories } from "@/constants";
+import { Input } from "@/components/Input";
 export default function Home() {
   return (
     <div className={styles.main_container}>
@@ -99,6 +100,44 @@ export default function Home() {
           <Button type="button" variant="primary">
             Start a project now
           </Button>
+        </div>
+        <div className={styles.projects_card_container}>
+          {projectCategories.map((projectCategory, index) => (
+            <div key={index + 1}>
+              {/* <Icon icon={projectCategory.image} key={index + 1} /> */}
+              <div className={styles.projects_cards}>
+                {projectCategory.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className={styles.contact_us}>
+        <div className={styles.contact_us_text_container}>
+          <div>
+            <h1 className={styles.contact_us_text_container_heading}>
+              Contact us
+            </h1>
+            <p className={styles.contact_us_text_container_title}>
+              We’d love to hear from you - send us a <br />
+              message and we’ll be in touch soon
+            </p>
+          </div>
+          <h1 className={styles.contact_us_text_container_email}>
+            example@gmail.com
+          </h1>
+        </div>
+        <div className={styles.contact_us_input_container}>
+          {inputLists.map((inputlist, index) => (
+            <label
+              htmlFor="name"
+              key={index + 1}
+              className={styles.contact_us_label}
+            >
+              <p>{inputlist}</p>
+              {/* <Input type="email" name="email" control={control} /> */}
+            </label>
+          ))}
         </div>
       </section>
     </div>

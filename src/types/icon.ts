@@ -4,4 +4,12 @@ export type IconNames =
   | "fundraiser"
   | "giftaid"
   | "tick"
-  | "arrowdown";
+  | "arrowdown"
+  | "medical"
+  | "burial"
+  | "cycle"
+  | "banquet"
+  | "outreach"
+  | "weddings"
+  | "building"
+  | "naming";
