@@ -8,6 +8,7 @@
   --secondary04: rgba(205, 205, 205, 0.4);
   --gray: #b4b4b4;
   --black: #000;
+  --black02: rgba(0,0,0,0.4);
   --gradient: linear-gradient(#ffffff, #dadafe);
   font-size: 1rem;
   box-sizing: border-box;

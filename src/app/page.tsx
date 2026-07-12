@@ -70,12 +70,13 @@ export default function Home() {
                 <Image
                   src={card.image}
                   alt={card.alt}
-                  fill
+                  width={300}
+                  height={300}
                   style={{ objectFit: "cover" }}
                 />
               </div>
               <div className={styles.news_card_text_container}>
-                <div>
+                <div className={styles.news_card_text}>
                   <h1 className={styles.news_card_heading}>{card.title}</h1>
                   <p className={styles.news_card_title}>{card.description}</p>
                 </div>
