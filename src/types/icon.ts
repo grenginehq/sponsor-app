@@ -12,4 +12,7 @@ export type IconNames =
   | "outreach"
   | "weddings"
   | "building"
-  | "naming";
+  | "naming"
+  | "instagram"
+  | "facebook"
+  | "linkedin";

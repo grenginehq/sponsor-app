@@ -6,7 +6,10 @@ import { Icon } from "@/components/Icon";
 import Image from "next/image";
 import { cards, inputLists, projectCategories } from "@/constants";
 import { Input } from "@/components/Input";
+// import { useForm } from "react-hook-form";
 export default function Home() {
+  // const { control } = useForm();
+
   return (
     <div className={styles.main_container}>
       <Header />
@@ -39,7 +42,7 @@ export default function Home() {
           <Button variant="primary" type="button" label="Start Now" />
         </div>
       </section>
-      <div className={styles.perspective_container}>
+      {/* <section className={styles.perspective_container}>
         <h1 className={styles.perspective_heading}>
           Perspectives from Our Partners
         </h1>
@@ -57,7 +60,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
+      </section> */}
       <section className={styles.news_container}>
         <div className={styles.news_top_container}>
           <h1 className={styles.news_heading}>In the News</h1>
@@ -139,6 +142,31 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <footer className={styles.footer}>
+        <div className={styles.footer_left_container}>
+          <div className={styles.footer_logos_container}>
+            <div className={styles.footer_logo_container}>
+              <Icon icon="instagram" />
+            </div>
+            <div className={styles.footer_logo_container}>
+              <Icon icon="facebook" />
+            </div>
+            <div className={styles.footer_logo_container}>
+              <Icon icon="linkedin" />
+            </div>
+          </div>
+          <small className={styles.footer_text}>
+            © 2026 Sponsor Inc. All rights reserved.
+          </small>
+        </div>
+        <div className={styles.footer_links_container}>
+          <a className={styles.footer_links}>Home</a>
+          <a className={styles.footer_links}>About</a>
+          <a className={styles.footer_links}>Community</a>
+          <a className={styles.footer_links}>In The News</a>
+          <a className={styles.footer_links}>Contact Us</a>
+        </div>
+      </footer>
     </div>
   );
 }
