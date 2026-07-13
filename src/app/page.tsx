@@ -39,7 +39,13 @@ export default function Home() {
             matters <br />
             most.
           </p>
-          <Button variant="primary" type="button" label="Start Now" />
+          <div className={styles.purpose_mobile_images_container}>
+            <Icon icon="fundraiser" />
+            <Icon icon="giftaid" />
+          </div>
+          <div className={styles.purpose_button_container}>
+            <Button variant="primary" type="button" label="Start Now" />
+          </div>
         </div>
       </section>
       {/* <section className={styles.perspective_container}>
@@ -98,6 +104,9 @@ export default function Home() {
           </h1>
           <p className={styles.project_text_container_title}>
             Make a difference by choosing a project to start with
+          </p>
+          <p className={styles.project_text_container_mobile_title}>
+            Make a difference by <br /> choosing a project to start <br /> with
           </p>
           <Button type="button" variant="primary">
             Start a project now

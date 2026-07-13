@@ -8,10 +8,23 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  @media only screen and (max-width: 390px) {
+    flex-direction: column;
+  }
 }
 .purpose_images_container {
   display: flex;
   gap: 24px;
+  @media only screen and (max-width: 390px) {
+    /* display: none; */ /* if i do not comment it none of the logos will show */
+  }
+}
+.purpose_mobile_images_container {
+  display: none;
+  @media only screen and (max-width: 390px) {
+    display: flex;
+    gap: 24px;
+  }
 }
 .purpose_heading {
   font-size: 48px;
@@ -19,6 +32,14 @@
   font-size: 60px;
   color: #000000;
   font-weight: 500;
+  @media only screen and (max-width: 390px) {
+    font-size: 30px;
+  }
+}
+.purpose_button_container {
+  @media only screen and (max-width: 390px) {
+    display: none;
+  }
 }
 .purpose_title {
   font-size: 16px;
@@ -108,16 +129,28 @@
 .news_heading {
   font-size: 60px;
   font-weight: 500;
+  @media only screen and (max-width: 390px) {
+    font-size: 30px;
+  }
 }
+
 .news_cards_container {
   display: grid;
   gap: 48px;
   grid-template-columns: repeat(2, 1fr);
+  @media only screen and (max-width: 390px) {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
 }
 .news_card {
   display: flex;
   gap: 10px;
   width: 100%;
+  @media only screen and (max-width: 390px) {
+    flex-direction: column;
+  }
 }
 .news_card_image_container {
   position: relative;
@@ -156,10 +189,6 @@
   font-weight: 400;
   color: var(--black02);
 }
-.news_heading {
-  font-weight: 500;
-  font-size: 60;
-}
 .news_card_text {
   display: flex;
   flex-direction: column;
@@ -167,7 +196,7 @@
 }
 
 .project_container {
-  padding: 100px;
+  padding: 100px 0px;
   background: var(--secondary01);
   display: flex;
   flex-direction: column;
@@ -184,16 +213,36 @@
   font-size: 60px;
   font-weight: 500;
   font-style: medium;
+  @media only screen and (max-width: 390px) {
+    font-size: 30px;
+  }
 }
 .project_text_container_title {
   font-size: 16px;
   font-weight: 400;
   font-style: regular;
+  @media only screen and (max-width: 390px) {
+    display: none;
+  }
+}
+.project_text_container_mobile_title {
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: regular;
+  @media only screen and (max-width: 390px) {
+    display: block;
+    text-align: center;
+  }
 }
 .projects_card_container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  @media only screen and (max-width: 390px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .projects_cards {
   padding: 24px 24px 32px 24px;
@@ -212,6 +261,11 @@
   padding-left: 48px;
   padding-right: 48px;
   padding-bottom: 0px;
+  @media only screen and (max-width: 390px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 .contact_us_text_container {
   display: flex;
@@ -220,6 +274,9 @@
 .contact_us_text_container_heading {
   font-size: 60px;
   font-weight: 500;
+  @media only screen and (max-width: 390px) {
+    font-size: 30px;
+  }
 }
 .contact_us_text_container_title {
   font-size: 16px;
@@ -231,6 +288,9 @@
   font-weight: 400;
   color: var(--black);
   font-family: var(--font-instrument-serif);
+  @media only screen and (max-width: 390px) {
+    font-size: 30px;
+  }
 }
 .contact_us_input_container {
   display: flex;
@@ -248,12 +308,20 @@
   font-size: 48px;
   font-family: var(--font-instrument-serif);
   font-weight: 400;
+  @media only screen and (max-width: 390px) {
+    font-size: 24px;
+  }
 }
 .footer {
   padding: 100px 48px;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  @media only screen and (max-width: 390px) {
+    flex-direction: column;
+    gap: 48px;
+    padding-top: 0px;
+  }
 }
 .footer_left_container {
   display: flex;
@@ -266,6 +334,9 @@
 }
 .footer_logo_container {
   padding: 16px;
+  @media only screen and (max-width: 390px) {
+    padding-left: 0px;
+  }
 }
 .footer_text {
   font-size: 12px;
@@ -286,4 +357,7 @@
   font-weight: 500;
   color: var(--black);
   padding-right: 120px;
+  @media only screen and (max-width: 390px) {
+    padding-right: 0px;
+  }
 }

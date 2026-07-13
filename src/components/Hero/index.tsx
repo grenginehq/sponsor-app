@@ -22,6 +22,10 @@ export const Hero = () => {
           Help us bring our project to life while making impact <br />
           to the community at large.
         </p>
+        <p className={styles.mobile_description}>
+          Help us bring our project to life while <br /> making impact to the
+          community at <br /> large.
+        </p>
         <Button type="button" variant="primary" label="Be a Sponsor" />
       </div>
       <motion.section

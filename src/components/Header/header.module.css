@@ -14,12 +14,6 @@
   gap: 32px;
 }
 
-.line {
-  width: 1px;
-  background: var(--black);
-  height: 20px;
-}
-
 .nav {
   display: flex;
   gap: space-between;
@@ -27,6 +21,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  @media only screen and (max-width: 390px) {
+    display: none;
+  }
 }
 .link {
   font-size: 16px;
@@ -36,4 +33,9 @@
   display: flex;
   gap: 48px;
   align-items: center;
+}
+.header_button_container {
+  @media only screen and (max-width: 390px) {
+    display: none;
+  }
 }

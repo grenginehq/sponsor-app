@@ -14,9 +14,11 @@ export const Header = () => {
           <a>Contact Us</a>
         </nav>
       </div>
-      <Button type="button" variant="secondary">
-        Become a Sponsor
-      </Button>
+      <div className={styles.header_button_container}>
+        <Button type="button" variant="secondary">
+          Become a Sponsor
+        </Button>
+      </div>
     </header>
   );
 };
