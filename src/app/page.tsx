@@ -11,6 +11,7 @@ import { Input } from "@/components/Input";
 import { motion } from "framer-motion";
 import { IconNames } from "@/types/icon";
 import { useForm } from "react-hook-form";
+import { useGetNewsQuery } from "@/services/newsApi";
 import { useMemo } from "react";
 
 export default function Home() {

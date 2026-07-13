@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Sans, Instrument_Serif, Inter } from "next/font/google";
 import "../styles/reset.css";
+import StoreProvider from "@/store/StoreProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -34,7 +35,9 @@ export default function RootLayout({
       lang="en"
       className={`${instrumentSans.variable} ${instrumentSerif.variable} ${inter}`}
     >
-      <body>{children}</body>
+      <StoreProvider>
+        <body>{children}</body>
+      </StoreProvider>
     </html>
   );
 }

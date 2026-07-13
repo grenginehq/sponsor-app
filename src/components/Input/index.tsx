@@ -66,6 +66,10 @@ export const Input = ({
 
   return (
     <>
+      <label className={styles.input_label} htmlFor={name}>
+        {label}
+      </label>
+
       <div className={styles.input_container}>
         {icon && <Icon icon={icon} />}
         <input
