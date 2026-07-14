@@ -1,5 +1,5 @@
 .hero_container {
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +44,7 @@
 .heading {
   font-size: 60px;
   font-weight: 700;
+  font-family: var(--font-instrument-sans);
   text-align: center;
   letter-spacing: 0%;
   line-height: 100%;
@@ -54,11 +55,11 @@
 .heading_container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
   align-items: center;
 }
 .hero_emphasis {
-  font-family: var(--font-instrument-serif);
+  font-family: var(--font-instrument-sans);
   font-style: italic;
 }
 
@@ -66,7 +67,6 @@
   position: relative;
   width: 100%;
   height: auto;
-  padding: 16px 0;
 }
 
 .marquee_track {
@@ -80,4 +80,8 @@
   height: 200px;
   width: 200px;
   flex-shrink: 0;
+}
+.hero_image_container {
+  display: flex;
+  justify-content: space-between;
 }

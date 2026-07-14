@@ -15,4 +15,5 @@ export type IconNames =
   | "naming"
   | "instagram"
   | "facebook"
-  | "linkedin";
+  | "linkedin"
+  | "logo2";

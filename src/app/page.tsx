@@ -44,9 +44,9 @@ export default function Home() {
           </div>
           <div className={styles.purpose_images_container}>
             {/* <div className={styles.purpose_track}> */}
-              <Icon icon="fundraiser" />
-              <Icon icon="giftaid" />
-              {/* <Icon icon="fundraiser" />
+            <Icon icon="fundraiser" />
+            <Icon icon="giftaid" />
+            {/* <Icon icon="fundraiser" />
               <Icon icon="giftaid" /> */}
             {/* </div> */}
           </div>

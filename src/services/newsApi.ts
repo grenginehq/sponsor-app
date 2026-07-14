@@ -5,8 +5,11 @@ export const newsApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://api.currentsapi.services/v1",
     prepareHeaders: (headers) => {
-        headers.set("Authorization", "sACxXRU7gcvNnHXgDRkYDpcqiJcTnTn-bT_xmAZIhlahR9_X");
-      
+      headers.set(
+        "Authorization",
+        "sACxXRU7gcvNnHXgDRkYDpcqiJcTnTn-bT_xmAZIhlahR9_X",
+      );
+
       headers.set("content-type", "application/json");
       return headers;
     },

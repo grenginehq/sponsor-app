@@ -1,5 +1,5 @@
 :root {
-  --primary: #5c247f;
+  --primary: #5C247F;
   --white: #fff;
   --secondary01: #5c247f;
   --secondary02: #7a7add;
@@ -40,7 +40,7 @@ body {
   direction: ltr;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: var(--font-instrument-sans);
+  font-family: var(--font-inter);
   background-color: var(--white);
   color: var(--black);
 }
