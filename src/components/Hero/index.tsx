@@ -9,13 +9,29 @@ import { motion } from "framer-motion";
 export const Hero = () => {
   return (
     <div className={styles.hero_container}>
+      <div className={styles.hero_images_container}>
+        <div className={styles.hero_images}>
+          <Image
+            src="/assets/images/white_man.png"
+            alt="white_man"
+            fill
+            objectFit="cover"
+          />
+        </div>
+        <div className={styles.hero_images}>
+          <Image
+            src="/assets/images/group.png"
+            alt="group"
+            fill
+            objectFit="cover"
+          />
+        </div>
+      </div>
       <div className={styles.inner_container}>
         <Pill label="Become a proud sponsor" />
         <div className={styles.heading_container}>
           <h2 className={styles.heading}>
-            Fueled b<span className={styles.hero_emphasis}>y</span> Vision{" "}
-            <br /> Powe<span className={styles.hero_emphasis}>r</span>ed by Pa
-            <span className={styles.hero_emphasis}>r</span>tners
+            Together <br /> We Can Transfrom Lives
           </h2>
         </div>
         <p className={styles.description}>
@@ -26,7 +42,25 @@ export const Hero = () => {
           Help us bring our project to life while <br /> making impact to the
           community at <br /> large.
         </p>
-        <Button type="button" variant="primary" label="Be a Sponsor" />
+        <Button type="button" variant="primary" label="Donate Now" />
+      </div>
+      <div className={styles.hero_images_container}>
+        <div className={styles.hero_images}>
+          <Image
+            src="/assets/images/white_man.png"
+            alt="white_man"
+            fill
+            objectFit="cover"
+          />
+        </div>
+        <div className={styles.hero_images}>
+          <Image
+            src="/assets/images/group.png"
+            alt="group"
+            fill
+            objectFit="cover"
+          />
+        </div>
       </div>
       <motion.section
         animate={{
@@ -51,7 +85,7 @@ export const Hero = () => {
             </div>
           ))}
         </div>
-      </motion.section>{" "}
+      </motion.section>
     </div>
   );
 };

@@ -16,7 +16,7 @@ export const Header = () => {
       </div>
       <div className={styles.header_button_container}>
         <Button type="button" variant="secondary">
-          Become a Sponsor
+          Donate Now
         </Button>
       </div>
     </header>
