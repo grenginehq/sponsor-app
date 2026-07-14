@@ -1,3 +1,4 @@
+"use client";
 import styles from "./page.module.css";
 import { Hero } from "../components/Hero";
 import { Button } from "@/components/Button";
@@ -7,15 +8,31 @@ import Image from "next/image";
 import { cards, inputLists, projectCategories } from "@/constants";
 import { Input } from "@/components/Input";
 // import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
+import { IconNames } from "@/types/icon";
+import { useForm } from "react-hook-form";
+import { useGetNewsQuery } from "@/services/newsApi";
+import { useMemo } from "react";
+
 export default function Home() {
-  // const { control } = useForm();
+  const { control } = useForm();
 
   return (
     <div className={styles.main_container}>
       <Header />
       <div></div>
       <Hero />
-      <section className={styles.purpose_container}>
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+        viewport={{
+          once: false,
+          amount: 0.3,
+        }}
+        className={styles.purpose_container}
+      >
         <div className={styles.purpose_text_container}>
           <div>
             <p className={styles.purpose_title}>THE APP</p>
@@ -26,28 +43,42 @@ export default function Home() {
             </h1>
           </div>
           <div className={styles.purpose_images_container}>
-            <Icon icon="fundraiser" />
-            <Icon icon="giftaid" />
+            {/* <div className={styles.purpose_track}> */}
+              <Icon icon="fundraiser" />
+              <Icon icon="giftaid" />
+              {/* <Icon icon="fundraiser" />
+              <Icon icon="giftaid" /> */}
+            {/* </div> */}
           </div>
         </div>
         <div className={styles.purpose_right_container}>
-          <p className={styles.purpose_description}>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            viewport={{
+              once: false,
+              amount: 0.3,
+            }}
+            className={styles.purpose_description}
+          >
             When you sponsor our events , your capital doesn’t just fund an
-            event—it <br /> directly fuels local initiatives that transform our
-            community from the ground <br />
-            up. Partner with us to create measurable community impact where it
-            matters <br />
-            most.
-          </p>
-          <div className={styles.purpose_mobile_images_container}>
-            <Icon icon="fundraiser" />
-            <Icon icon="giftaid" />
-          </div>
-          <div className={styles.purpose_button_container}>
-            <Button variant="primary" type="button" label="Start Now" />
-          </div>
+            event—it directly fuels local initiatives that transform our
+            community from the ground up. Partner with us to create measurable
+            community impact where it matters most. Partner with us to create
+            measurable, lasting community impact where it matters most.
+            Together, we can turn corporate generosity into tangible blessings
+            and meaningful change, demonstrating God's love through a dedicated
+            collaboration that builds a stronger, more resilient neighborhood
+            for everyone.
+          </motion.p>
+
+          <p className={styles.purpose_description}></p>
+
+          <Button variant="primary" type="button" label="Start Now" />
         </div>
-      </section>
+      </motion.section>
       {/* <section className={styles.perspective_container}>
         <h1 className={styles.perspective_heading}>
           Perspectives from Our Partners
@@ -67,36 +98,6 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-      <section className={styles.news_container}>
-        <div className={styles.news_top_container}>
-          <h1 className={styles.news_heading}>In the News</h1>
-          <Button variant="primary" type="button" label="Read all stories" />
-        </div>
-        <div className={styles.news_cards_container}>
-          {cards.map((card, index) => (
-            <div className={styles.news_card} key={index + 1}>
-              <div className={styles.news_card_image_container}>
-                <Image
-                  src={card.image}
-                  alt={card.alt}
-                  width={300}
-                  height={300}
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className={styles.news_card_text_container}>
-                <div className={styles.news_card_text}>
-                  <h1 className={styles.news_card_heading}>{card.title}</h1>
-                  <p className={styles.news_card_title}>{card.description}</p>
-                </div>
-                <button className={styles.news_card_button}>
-                  <Icon icon="arrowdown" />
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
       <section className={styles.project_container}>
         <div className={styles.project_text_container}>
           <h1 className={styles.project_text_container_heading}>
@@ -105,24 +106,90 @@ export default function Home() {
           <p className={styles.project_text_container_title}>
             Make a difference by choosing a project to start with
           </p>
-          <p className={styles.project_text_container_mobile_title}>
-            Make a difference by <br /> choosing a project to start <br /> with
-          </p>
           <Button type="button" variant="primary">
             Start a project now
           </Button>
         </div>
         <div className={styles.projects_card_container}>
           {projectCategories.map((projectCategory, index) => (
-            <div key={index + 1}>
-              {/* <Icon icon={projectCategory.image} key={index + 1} /> */}
-              <div className={styles.projects_cards}>
-                {projectCategory.label}
-              </div>
-            </div>
+            <motion.div
+              whileHover={{
+                scale: 1.05,
+                y: -5,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              }}
+              key={index + 1}
+              className={styles.projects_card}
+            >
+              <Icon icon={projectCategory.icon as IconNames} />
+              {projectCategory.label}
+            </motion.div>
           ))}
         </div>
       </section>
+      {/* <section className={styles.news_container}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          viewport={{
+            once: false,
+            amount: 0.3,
+          }}
+          className={styles.news_top_container}
+        >
+          <h1 className={styles.news_heading}>In the News</h1>
+          <Button variant="primary" type="button" label="Read all stories" />
+        </motion.div>
+        <div className={styles.news_cards_container}>
+          {filteredNews?.map((newsItem, index) => (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              className={styles.news_card}
+              key={index + 1}
+            >
+              <div className={styles.news_card_image_container}>
+                <Image
+                  src={newsItem.image}
+                  alt={newsItem.alt}
+                  width={300}
+                  height={300}
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                className={styles.news_card_text_container}
+              >
+                <div className={styles.news_card_text}>
+                  <h1 className={styles.news_card_heading}>{newsItem.title}</h1>
+                  <p className={styles.news_card_title}>
+                    {newsItem.description}
+                  </p>
+                </div>
+                <button className={styles.news_card_button}>
+                  <Icon icon="arrowdown" />
+                </button>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
+      </section> */}
       <section className={styles.contact_us}>
         <div className={styles.contact_us_text_container}>
           <div>
@@ -135,21 +202,16 @@ export default function Home() {
             </p>
           </div>
           <h1 className={styles.contact_us_text_container_email}>
-            example@gmail.com
+            churchadmin
+            <br />
+            @bethesda-aei.org
           </h1>
         </div>
-        <div className={styles.contact_us_input_container}>
-          {inputLists.map((inputlist, index) => (
-            <label
-              htmlFor="name"
-              key={index + 1}
-              className={styles.contact_us_label}
-            >
-              <p>{inputlist}</p>
-              {/* <Input type="email" name="email" control={control} /> */}
-            </label>
-          ))}
-        </div>
+        <form className={styles.contact_us_input_container}>
+          <Input control={control} type="text" name="name" label="Name" />
+          <Input control={control} type="email" name="email" label="Email" />
+          <Input control={control} type="text" name="message" label="Message" />
+        </form>
       </section>
       <footer className={styles.footer}>
         <div className={styles.footer_left_container}>
@@ -165,7 +227,7 @@ export default function Home() {
             </div>
           </div>
           <small className={styles.footer_text}>
-            © 2026 Sponsor Inc. All rights reserved.
+            © 2026 Bethseda Foodbank Inc. All rights reserved.
           </small>
         </div>
         <div className={styles.footer_links_container}>
