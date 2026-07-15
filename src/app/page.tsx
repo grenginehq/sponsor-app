@@ -44,9 +44,9 @@ export default function Home() {
           </div>
           <div className={styles.purpose_images_container}>
             {/* <div className={styles.purpose_track}> */}
-              <Icon icon="fundraiser" />
-              <Icon icon="giftaid" />
-              {/* <Icon icon="fundraiser" />
+            <Icon icon="fundraiser" />
+            <Icon icon="giftaid" />
+            {/* <Icon icon="fundraiser" />
               <Icon icon="giftaid" /> */}
             {/* </div> */}
           </div>
@@ -99,15 +99,18 @@ export default function Home() {
         </div>
       </section> */}
       <section className={styles.project_container}>
-        <div className={styles.project_text_container}>
-          <h1 className={styles.project_text_container_heading}>
-            Start a sponsor project
-          </h1>
-          <p className={styles.project_text_container_title}>
-            Make a difference by choosing a project to start with
-          </p>
+        <div className={styles.project_top_container}>
+          <div className={styles.project_text_container}>
+            <h1 className={styles.project_text_container_heading}>
+              Start a sponsor project
+            </h1>
+            <p className={styles.project_text_container_title}>
+              Make a difference by choosing a project to start with. Select a
+              project to get you started.
+            </p>
+          </div>
           <Button type="button" variant="primary">
-            Start a project now
+            Donate Now
           </Button>
         </div>
         <div className={styles.projects_card_container}>
@@ -191,7 +194,50 @@ export default function Home() {
         </div>
       </section> */}
       <section className={styles.contact_us}>
-        <div className={styles.contact_us_text_container}>
+        <div className={styles.contact_us_top_container}>
+          <div className={styles.contact_us_logo_container}>
+            <Icon icon="skykick" />
+            <Icon icon="notch" />
+            <Icon icon="recipe" />
+            <Icon icon="vena" />
+            <Icon icon="passporthealth" />
+          </div>
+        </div>
+        <div className={styles.contact_us_container}>
+          <div className={styles.contact_us_form_container}>
+            <h1 className={styles.contact_us_text_container_heading}>
+              Contact us
+            </h1>
+            <p className={styles.contact_us_text_container_title}>
+              We’d love to hear from you - send us a <br />
+              message and we’ll be in touch soon
+            </p>
+            <form className={styles.contact_us_input_container}>
+              <Input control={control} type="text" name="name" label="NAME" />
+              <Input
+                control={control}
+                type="email"
+                name="email"
+                label="EMAIL ADDRESS"
+              />
+              <Input
+                control={control}
+                type="text"
+                name="message"
+                label="MESSAGE"
+              />
+            </form>
+          </div>
+          <div className={styles.contact_us_image_container}>
+            <Image
+              src="/assets/images/employee.png"
+              alt="employee_img"
+              fill
+              objectFit="cover"
+            />
+          </div>
+        </div>
+        {/* <div className={styles.contact_us_text_container}>
           <div>
             <h1 className={styles.contact_us_text_container_heading}>
               Contact us
@@ -201,17 +247,7 @@ export default function Home() {
               message and we’ll be in touch soon
             </p>
           </div>
-          <h1 className={styles.contact_us_text_container_email}>
-            churchadmin
-            <br />
-            @bethesda-aei.org
-          </h1>
-        </div>
-        <form className={styles.contact_us_input_container}>
-          <Input control={control} type="text" name="name" label="Name" />
-          <Input control={control} type="email" name="email" label="Email" />
-          <Input control={control} type="text" name="message" label="Message" />
-        </form>
+        </div> */}
       </section>
       <footer className={styles.footer}>
         <div className={styles.footer_left_container}>

@@ -15,4 +15,9 @@ export type IconNames =
   | "naming"
   | "instagram"
   | "facebook"
-  | "linkedin";
+  | "linkedin"
+  | "skykick"
+  | "notch"
+  | "recipe"
+  | "vena"
+  | "passporthealth";

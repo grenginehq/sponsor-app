@@ -68,31 +68,30 @@ export const Input = ({
     <>
       <label className={styles.input_label} htmlFor={name}>
         {label}
+        <div className={styles.input_container}>
+          {icon && <Icon icon={icon} />}
+          <input
+            id={name}
+            type={type}
+            readOnly={disabled}
+            placeholder={placeholder}
+            {...field}
+            onChange={(e) => {
+              field.onChange(e);
+              onChange?.();
+            }}
+            min={min}
+            autoFocus={autoFocus}
+            autoComplete={getAutoCompleteValue()}
+            data-form-type="other"
+            data-lpignore={type === "password" ? "true" : undefined}
+            spellCheck="false"
+            disabled={disabled}
+            className={styles.input}
+          />
+        </div>
+        {error && <div className={styles.input_error}>{error?.message}</div>}
       </label>
-
-      <div className={styles.input_container}>
-        {icon && <Icon icon={icon} />}
-        <input
-          id={name}
-          type={type}
-          readOnly={disabled}
-          placeholder={placeholder}
-          {...field}
-          onChange={(e) => {
-            field.onChange(e);
-            onChange?.();
-          }}
-          min={min}
-          autoFocus={autoFocus}
-          autoComplete={getAutoCompleteValue()}
-          data-form-type="other"
-          data-lpignore={type === "password" ? "true" : undefined}
-          spellCheck="false"
-          disabled={disabled}
-          className={styles.input}
-        />
-      </div>
-      {error && <div className={styles.input_error}>{error?.message}</div>}
     </>
   );
 };

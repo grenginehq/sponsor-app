@@ -77,16 +77,6 @@ export const projectCategories = [
     value: "BURIAL",
   },
   {
-    icon: "cycle",
-    label: "Cycle Marathon",
-    value: "CYCLE_MARATHON",
-  },
-  {
-    icon: "banquet",
-    label: "Banquet",
-    value: "BANQUET",
-  },
-  {
     icon: "outreach",
     label: "Community Outreach",
     value: "COMMUNITY_OUTREACH",
@@ -97,14 +87,24 @@ export const projectCategories = [
     value: "WEDDINGS",
   },
   {
-    icon: "building",
-    label: "Building",
-    value: "BUILDING",
+    icon: "banquet",
+    label: "Banquet",
+    value: "BANQUET",
   },
   {
     icon: "naming",
     label: "Naming Ceremony",
     value: "NAMING",
+  },
+  {
+    icon: "building",
+    label: "Building",
+    value: "BUILDING",
+  },
+  {
+    icon: "cycle",
+    label: "Cycle Marathon",
+    value: "CYCLE_MARATHON",
   },
 ];
 
