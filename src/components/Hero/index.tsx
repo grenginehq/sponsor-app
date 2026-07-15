@@ -47,6 +47,7 @@ export const Hero = () => {
                 fill
                 alt={image.alt}
                 style={{ objectFit: "cover" }}
+                priority
               />
             </div>
           ))}
