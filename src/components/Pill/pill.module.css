@@ -2,8 +2,8 @@
   padding: 16px 32px;
   display: flex;
   align-items: center;
-  background-color: #dadafe;
-  color: var(--secondary01);
+  background-color: var(--secondary03);
+  color: var(--primary);
   border-radius: 50px;
   font-size: 16px;
   font-weight: 500;

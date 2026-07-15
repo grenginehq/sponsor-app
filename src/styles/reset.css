@@ -42,7 +42,7 @@ body {
   direction: ltr;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: var(--font-instrument-sans);
+  font-family: var(--font-inter);
   background-color: var(--white);
   color: var(--black);
 }
