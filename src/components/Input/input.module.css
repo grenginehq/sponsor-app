@@ -35,7 +35,6 @@
 
 .input_label {
   color: var(--black);
-<<<<<<< HEAD
   font-family: var(--font-instrument-serif);
   font-size: 16px;
   font-style: medium;
@@ -44,11 +43,9 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-=======
   font-family: var(--font-instrument-sans);
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
->>>>>>> ca7c5300a75fa64cc50146eb18158b3c13e7e507
 }

@@ -22,6 +22,9 @@ export const Header = () => {
         </Link>
         <Link className={styles.nav_link} href={""}>
           Unity & Well-being
+        </Link>{" "}
+        <Link className={styles.nav_link} href={""}>
+          Contact Us
         </Link>
       </nav>
       <div className={styles.header_button_container}>
