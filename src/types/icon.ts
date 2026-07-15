@@ -21,4 +21,5 @@ export type IconNames =
   | "recipe"
   | "vena"
   | "passporthealth"
-  | "logo2";
+  | "logo2"
+  | "footerlogo";

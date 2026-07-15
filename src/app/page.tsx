@@ -46,7 +46,10 @@ export default function Home() {
           ))}
         </div>
       </motion.section>
-      <motion.section
+      <section className={styles.about_section}>
+        <h1>The Vision Behind Bethseda</h1>
+      </section>
+      {/* <motion.section
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -50 }}
@@ -67,12 +70,12 @@ export default function Home() {
             </h1>
           </div>
           <div className={styles.purpose_images_container}>
-            {/* <div className={styles.purpose_track}> */}
+            <div className={styles.purpose_track}>
             <Icon icon="fundraiser" />
             <Icon icon="giftaid" />
-            {/* <Icon icon="fundraiser" />
-              <Icon icon="giftaid" /> */}
-            {/* </div> */}
+            <Icon icon="fundraiser" />
+              <Icon icon="giftaid" />
+            </div>
           </div>
         </div>
         <div className={styles.purpose_right_container}>
@@ -102,7 +105,7 @@ export default function Home() {
 
           <Button variant="primary" type="button" label="Start Now" />
         </div>
-      </motion.section>
+      </motion.section> */}
       {/* <section className={styles.perspective_container}>
         <h1 className={styles.perspective_heading}>
           Perspectives from Our Partners
@@ -274,7 +277,8 @@ export default function Home() {
         </div> */}
       </section>
       <footer className={styles.footer}>
-        <div className={styles.footer_left_container}>
+        <Icon icon="footerlogo" />
+        <div className={styles.footer_right_container}>
           <div className={styles.footer_logos_container}>
             <div className={styles.footer_logo_container}>
               <Icon icon="instagram" />
@@ -286,16 +290,13 @@ export default function Home() {
               <Icon icon="linkedin" />
             </div>
           </div>
-          <small className={styles.footer_text}>
-            © 2026 Bethseda Foodbank Inc. All rights reserved.
-          </small>
-        </div>
-        <div className={styles.footer_links_container}>
-          <a className={styles.footer_links}>Home</a>
-          <a className={styles.footer_links}>About</a>
-          <a className={styles.footer_links}>Community</a>
-          <a className={styles.footer_links}>In The News</a>
-          <a className={styles.footer_links}>Contact Us</a>
+          <div className={styles.footer_links_container}>
+            <a className={styles.footer_links}>Home</a>
+            <a className={styles.footer_links}>About</a>
+            <a className={styles.footer_links}>Community</a>
+            <a className={styles.footer_links}>In The News</a>
+            <a className={styles.footer_links}>Contact Us</a>
+          </div>
         </div>
       </footer>
     </div>
