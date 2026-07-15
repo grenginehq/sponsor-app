@@ -1,0 +1,13 @@
+.main_container {
+  display: flex;
+  justify-content: center;
+  background: var(--black);
+  align-items: center;
+  padding: 15px 153px;
+}
+.inner_container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
