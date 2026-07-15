@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import { images } from "@/constants";
 import { Button } from "../Button";
 import { Pill } from "../Pill";
@@ -28,38 +29,41 @@ export const Hero = () => {
           <Button type="button" variant="primary" label="Donate Now" />
         </div>
       </div>
-      <motion.section
-        animate={{
-          x: ["0%", "-50%"],
-        }}
-        transition={{
-          ease: "linear",
-          duration: 20,
-          repeat: Infinity,
-        }}
-        className={styles.grid_container}
-      >
-        <div className={styles.marquee_track}>
+
+      <section className={styles.grid_container}>
+        <motion.div 
+          className={styles.marquee_track}
+          initial={{ x: "0%" }}
+          animate={{ x: "-50%" }}
+          transition={{
+            ease: "linear",
+            duration: 20,
+            repeat: Infinity,
+          }}
+        >
           {images.concat([...images, ...images]).map((image, index) => (
-            <div key={index + 1} className={styles.hero_image}>
+            <div 
+              key={`marquee-img-${index}`} 
+              className={styles.hero_image}
+            >
               <Image
                 src={image.src}
                 fill
                 alt={image.alt}
-                style={{ objectFit: "cover" }}
-                priority
+                sizes="(max-width: 1440px) 150px, 200px"
               />
             </div>
           ))}
-        </div>
-      </motion.section>
+        </motion.div>
+      </section>
+
       <div className={styles.hero_top_right_image}>
         <div className={styles.hero_image}>
           <Image
             src="/assets/images/guy_and_woman.jpg"
             alt="group"
             fill
-            objectFit="cover"
+            sizes="(max-width: 1440px) 150px, 200px"
           />
         </div>
       </div>
@@ -69,7 +73,7 @@ export const Hero = () => {
             src="/assets/images/guy.jpg"
             alt="guy"
             fill
-            objectFit="cover"
+            sizes="(max-width: 1440px) 150px, 200px"
           />
         </div>
       </div>
@@ -79,7 +83,7 @@ export const Hero = () => {
             src="/assets/images/church.jpg"
             alt="group"
             fill
-            objectFit="cover"
+            sizes="(max-width: 1440px) 150px, 200px"
           />
         </div>
       </div>
@@ -89,7 +93,7 @@ export const Hero = () => {
             src="/assets/images/christmas.jpg"
             alt="group"
             fill
-            objectFit="cover"
+            sizes="(max-width: 1440px) 150px, 200px"
           />
         </div>
       </div>

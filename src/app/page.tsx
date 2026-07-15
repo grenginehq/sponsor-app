@@ -23,30 +23,6 @@ export default function Home() {
       <div></div>
       <Hero />
       <motion.section
-        animate={{
-          x: ["0%", "-50%"],
-        }}
-        transition={{
-          ease: "linear",
-          duration: 20,
-          repeat: Infinity,
-        }}
-        className={styles.grid_container}
-      >
-        <div className={styles.marquee_track}>
-          {images.concat(images).map((image, index) => (
-            <div key={index + 1} className={styles.hero_image}>
-              <Image
-                src={image.src}
-                fill
-                alt={image.alt}
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-          ))}
-        </div>
-      </motion.section>
-      <motion.section
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -50 }}
