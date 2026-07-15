@@ -10,7 +10,7 @@ export default function Sponsor() {
   return (
     <div className={styles.sponsor}>
       <header className={styles.sponsor_header}>
-        <Icon icon="logo" />
+        <Icon icon="logo2" />
       </header>
       <div className={styles.sponsor_form}>
         <FirstStep control={control} />
