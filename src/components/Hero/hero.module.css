@@ -41,6 +41,9 @@
   @media only screen and (max-width: 390px) {
     font-size: 30px;
   }
+  @media only screen and (max-width: 1440px) {
+    font-size: 45px;
+  }
 }
 .heading_container {
   display: flex;
