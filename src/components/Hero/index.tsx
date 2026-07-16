@@ -31,7 +31,7 @@ export const Hero = () => {
       </div>
 
       <section className={styles.grid_container}>
-        <motion.div 
+        <motion.div
           className={styles.marquee_track}
           initial={{ x: "0%" }}
           animate={{ x: "-50%" }}
@@ -42,10 +42,7 @@ export const Hero = () => {
           }}
         >
           {images.concat([...images, ...images]).map((image, index) => (
-            <div 
-              key={`marquee-img-${index}`} 
-              className={styles.hero_image}
-            >
+            <div key={`marquee-img-${index}`} className={styles.hero_image}>
               <Image
                 src={image.src}
                 fill

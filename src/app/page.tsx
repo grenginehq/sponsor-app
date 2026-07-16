@@ -45,28 +45,25 @@ export default function Home() {
         <h1>The Vision Behind Bethseda</h1>
         <div className={styles.about_container}>
           <div className={styles.about_text_container}>
-            <p>
-              Bethesda is a registered charity committed to transforming lives{" "}
-              <br />
+            <p className={styles.about_text_bold}>
+              Bethesda is a registered charity committed to transforming lives
               through faith, compassion, and action.
             </p>
-            <p>
+            <p className={styles.about_text}>
               Rooted in the belief that every individual deserves dignity and
-              opportunity, <br /> we dedicate ourselves to addressing essential
-              needs, supporting personal <br /> growth, and fostering a sense of
-              community and connection.
+              opportunity, we dedicate ourselves to addressing essential needs,
+              supporting personal growth, and fostering a sense of community and
+              connection.
             </p>
-            <p>
+            <p className={styles.about_text}>
               Bethesda is a registered charity committed to transforming lives
-              through <br />
-              faith, compassion, and action.
+              through faith, compassion, and action.
             </p>
-            <p>
+            <p className={styles.about_text}>
               Rooted in the belief that every individual deserves dignity and
-              opportunity,
-              <br /> we dedicate ourselves to addressing essential needs,
-              supporting personal <br /> growth, and fostering a sense of
-              community and connection.
+              opportunity, we dedicate ourselves to addressing essential needs,
+              supporting personal growth, and fostering a sense of community and
+              connection.
             </p>
           </div>
           <div className={styles.about_image_container}>
