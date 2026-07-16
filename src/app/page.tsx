@@ -5,13 +5,7 @@ import { Button } from "@/components/Button";
 import { Header } from "@/components/Header";
 import { Icon } from "@/components/Icon";
 import Image from "next/image";
-import {
-  cards,
-  cardValues,
-  images,
-  inputLists,
-  projectCategories,
-} from "@/constants";
+import { cards, images, inputLists, projectCategories } from "@/constants";
 import { Input } from "@/components/Input";
 // import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
@@ -126,34 +120,92 @@ export default function Home() {
       </div>
       <section className={styles.card_section}>
         <div className={styles.cards_container}>
-          {cardValues.map((cardValue, index) => (
-            <div
-              className={styles.card}
-              key={index + 1}
-              style={{ background: cardValue.background }}
-            >
+          <div className={styles.light_card}>
+            <div className={styles.card_text_container}>
+              <h1 className={styles.card_number}>01</h1>
+              <div className={styles.card_bottom_text_container}>
+                <h1 className={styles.card_heading}>Unity and Wellbeing</h1>
+                <p className={styles.card_description}>
+                  We believe that sharing a meal is one of the most sacred ways
+                  to show God’s love. Our church’s food pantry is more than a
+                  distribution site—it is a ministry of grace. Guided by the
+                  call to love our neighbours as ours+elves, we provide
+                  nutritious food and essential supplies to families navigating
+                  difficult seasons.
+                </p>
+                <p className={styles.desccription}>
+                  By easing the immediate burden of hunger, we seek to be the
+                  hands and feet of Jesus, helping our community regain the
+                  stability, dignity, and hope they deserve.
+                </p>
+              </div>
+            </div>
+            <div className={styles.card_image_container}>
+              <Image
+                src="/assets/images/unity.png"
+                alt="unity_img"
+                fill
+                objectFit="cover"
+              />
+            </div>
+            <div className={styles.medium_card}>
               <div className={styles.card_text_container}>
-                <h1 className={styles.card_number}>{cardValue.id}</h1>
+                <h1 className={styles.card_number}>02</h1>
                 <div className={styles.card_bottom_text_container}>
-                  <h1 className={styles.card_heading}>{cardValue.heading}</h1>
+                  <h1 className={styles.card_heading}>Education for All</h1>
                   <p className={styles.card_description}>
-                    {cardValue.firstDescription}
+                    At our core, we believe everyone deserves the opportunity to
+                    thrive. Our tailored programs go beyond education—we
+                    cultivate hands-on skills, foster personal growth, and build
+                    a supportive community that empowers every individual to
+                    pave their own path to success.
                   </p>
                   <p className={styles.desccription}>
-                    {cardValue.secdescription}
+                    As a foundation, we provide the vital resources and
+                    wrap-around support needed to turn hope into sustainable
+                    independence.
                   </p>
                 </div>
               </div>
               <div className={styles.card_image_container}>
                 <Image
-                  src={cardValue.image}
-                  alt={cardValue.alt}
+                  src="/assets/images/education.png"
+                  alt="education_img"
                   fill
                   objectFit="cover"
                 />
               </div>
+              <div className={styles.dark_card}>
+                <div className={styles.card_text_container}>
+                  <h1 className={styles.card_number}>03</h1>
+                  <div className={styles.card_bottom_text_container}>
+                    <h1 className={styles.card_heading}>Food Assistance</h1>
+                    <p className={styles.card_description}>
+                      We believe that sharing a meal is one of the most sacred
+                      ways to show God’s love. Our church’s food pantry is more
+                      than a distribution site—it is a ministry of grace. Guided
+                      by the call to love our neighbours as ours+elves, we
+                      provide nutritious food and essential supplies to families
+                      navigating difficult seasons.
+                    </p>
+                    <p className={styles.desccription}>
+                      By easing the immediate burden of hunger, we seek to be
+                      the hands and feet of Jesus, helping our community regain
+                      the stability, dignity, and hope they deserve.
+                    </p>
+                  </div>
+                </div>
+                <div className={styles.card_image_container}>
+                  <Image
+                    src="/assets/images/food.png"
+                    alt="food_img"
+                    fill
+                    objectFit="cover"
+                  />
+                </div>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
       </section>
       <section className={styles.contact_us}>
