@@ -5,7 +5,13 @@ import { Button } from "@/components/Button";
 import { Header } from "@/components/Header";
 import { Icon } from "@/components/Icon";
 import Image from "next/image";
-import { cards, images, inputLists, projectCategories } from "@/constants";
+import {
+  cards,
+  cardValues,
+  images,
+  inputLists,
+  projectCategories,
+} from "@/constants";
 import { Input } from "@/components/Input";
 // import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
@@ -14,6 +20,7 @@ import { useForm } from "react-hook-form";
 import { useGetNewsQuery } from "@/services/newsApi";
 import { useMemo } from "react";
 import Logo from "@/components/Logos";
+import { style } from "framer-motion/m";
 
 export default function Home() {
   const { control } = useForm();
@@ -117,6 +124,38 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <section className={styles.card_section}>
+        <div className={styles.cards_container}>
+          {cardValues.map((cardValue, index) => (
+            <div
+              className={styles.card}
+              key={index + 1}
+              style={{ background: cardValue.background }}
+            >
+              <div className={styles.card_text_container}>
+                <h1 className={styles.card_number}>{cardValue.id}</h1>
+                <div className={styles.card_bottom_text_container}>
+                  <h1 className={styles.card_heading}>{cardValue.heading}</h1>
+                  <p className={styles.card_description}>
+                    {cardValue.firstDescription}
+                  </p>
+                  <p className={styles.desccription}>
+                    {cardValue.secdescription}
+                  </p>
+                </div>
+              </div>
+              <div className={styles.card_image_container}>
+                <Image
+                  src={cardValue.image}
+                  alt={cardValue.alt}
+                  fill
+                  objectFit="cover"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
       <section className={styles.contact_us}>
         <Logo />
         <div className={styles.contact_us_container}>

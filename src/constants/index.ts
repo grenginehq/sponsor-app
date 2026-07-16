@@ -109,3 +109,38 @@ export const projectCategories = [
 ];
 
 export const inputLists = ["Name", "Email Address", "Message"];
+export const cardValues = [
+  {
+    id: "03",
+    heading: "Food Assistance",
+    firstDescription:
+      "We believe that sharing a meal is one of the most sacred ways to show God’s love. Our church’s food pantry is more than a distribution site—it is a ministry of grace. Guided by the call to love our neighbours as ours+elves, we provide nutritious food and essential supplies to families navigating difficult seasons. ",
+    secdescription:
+      "By easing the immediate burden of hunger, we seek to be the hands and feet of Jesus, helping our community regain the stability, dignity, and hope they deserve.",
+    image: "/assets/images/food.png",
+    alt: "food_img",
+    background: "var(--secondary08)",
+  },
+  {
+    id: "02",
+    heading: "Education for All",
+    firstDescription:
+      "At our core, we believe everyone deserves the opportunity to thrive. Our tailored programs go beyond education—we cultivate hands-on skills, foster personal growth, and build a supportive community that empowers every individual to pave their own path to success.",
+    secdescription:
+      "As a foundation, we provide the vital resources and wrap-around support needed to turn hope into sustainable independence.",
+    image: "/assets/images/education.png",
+    alt: "education_img",
+    background: "var(--secondary10)",
+  },
+  {
+    id: "01",
+    heading: "Unity and Wellbeing",
+    firstDescription:
+      "We believe that sharing a meal is one of the most sacred ways to show God’s love. Our church’s food pantry is more than a distribution site—it is a ministry of grace. Guided by the call to love our neighbours as ours+elves, we provide nutritious food and essential supplies to families navigating difficult seasons. ",
+    secdescription:
+      "By easing the immediate burden of hunger, we seek to be the hands and feet of Jesus, helping our community regain the stability, dignity, and hope they deserve.",
+    image: "/assets/images/unity.png",
+    alt: "unity_img",
+    background: "var(--secondary11)",
+  },
+];
