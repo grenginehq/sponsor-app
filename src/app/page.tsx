@@ -17,9 +17,60 @@ import Link from "next/link";
 
 const smoothTransition = {
   type: "tween",
-  ease: [0.25, 0.1, 0.25, 1.0], 
-  duration: 0.8,                
+  ease: [0.25, 0.1, 0.25, 1.0],
+  duration: 0.8,
 } as const;
+
+const projectGridVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+} as const;
+
+const projectCardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+    scale: 0.98,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: smoothTransition,
+  },
+} as const;
+
+const cardContainerVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 80 
+  },
+  visible: {
+    opacity: 1,
+    y: 0, 
+    transition: {
+      type: "spring",
+      stiffness: 55,
+      damping: 15,
+      delayChildren: 0.2 
+    },
+  },
+} as const;
+
+const cardVariants = {
+  hidden: { 
+    opacity: 0 
+  },
+  visible: { 
+    opacity: 1, 
+    transition: { duration: 0.5 }
+  },
+} as const
 
 export default function Home() {
   const { control } = useForm();
@@ -30,9 +81,7 @@ export default function Home() {
       <div></div>
       <Hero />
       <motion.section
-        animate={{
-          x: ["0%", "-50%"],
-        }}
+        animate={{ x: ["0%", "-50%"] }}
         transition={{
           ease: "linear",
           duration: 20,
@@ -46,31 +95,17 @@ export default function Home() {
           ))}
         </div>
       </motion.section>
-      
       <section className={styles.about_section}>
         <h1>The Vision Behind Bethseda</h1>
         <div className={styles.about_container}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{
-              once: false, 
-              amount: 0.15,
-            }}
+            viewport={{ once: false, amount: 0.15 }} // "once: true" eliminates stuttering layouts
             transition={smoothTransition}
             className={styles.about_text_container}
           >
             <p className={styles.about_text_bold}>
-              Bethesda is a registered charity committed to transforming lives
-              through faith, compassion, and action.
-            </p>
-            <p className={styles.about_text}>
-              Rooted in the belief that every individual deserves dignity and
-              opportunity, we dedicate ourselves to addressing essential needs,
-              supporting personal growth, and fostering a sense of community and
-              connection.
-            </p>
-            <p className={styles.about_text}>
               Bethesda is a registered charity committed to transforming lives
               through faith, compassion, and action.
             </p>
@@ -86,12 +121,11 @@ export default function Home() {
               src="/assets/images/reverend.png"
               alt="reverend_image"
               fill
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
             />
           </div>
         </div>
       </section>
-
       <div>
         <Logo />
         <section className={styles.project_container}>
@@ -109,50 +143,39 @@ export default function Home() {
               Donate Now
             </Button>
           </div>
-          <div className={styles.projects_card_container}>
+          <motion.div
+            className={styles.projects_card_container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={projectGridVariants}
+          >
             {projectCategories.map((projectCategory, index) => (
               <motion.div
+                key={index + 1}
+                className={styles.projects_card}
+                variants={projectCardVariants} // Inherits visible/hidden logic smoothly
                 whileHover={{
                   scale: 1.03,
                   y: -4,
                 }}
-                initial={{
-                  opacity: 0,
-                  y: 30,
-                  scale: 0.98,
-                  rotateX: 4,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                  rotateX: 0,
-                }}
-                viewport={{ 
-                  once: false, 
-                  amount: 0.1 
-                }}
-                transition={{
-                  ...smoothTransition,
-                  delay: index * 0.08, 
-                }}
-                style={{
-                  perspective: 1000,
-                }}
-                key={index + 1}
-                className={styles.projects_card}
               >
                 <Icon icon={projectCategory.icon as IconNames} />
                 {projectCategory.label}
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </section>
       </div>
-
       <section className={styles.card_section}>
-        <div className={styles.cards_container}>
-          <div className={styles.light_card}>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.01 }}
+          variants={cardContainerVariants}
+          className={styles.cards_container}
+        >
+          <motion.div variants={cardVariants} className={styles.light_card}>
             <div className={styles.card_text_container}>
               <h1 className={styles.card_number}>01</h1>
               <div className={styles.card_bottom_text_container}>
@@ -161,7 +184,7 @@ export default function Home() {
                   We believe that sharing a meal is one of the most sacred ways
                   to show God’s love. Our church’s food pantry is more than a
                   distribution site—it is a ministry of grace. Guided by the
-                  call to love our neighbours as ours+elves, we provide
+                  call to love our neighbours as ourselves, we provide
                   nutritious food and essential supplies to families navigating
                   difficult seasons.
                 </p>
@@ -178,12 +201,12 @@ export default function Home() {
                   src="/assets/images/unity.png"
                   alt="unity_img"
                   fill
-                  objectFit="cover"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
             </div>
-          </div>
-          <div className={styles.medium_card}>
+          </motion.div>
+          <motion.div variants={cardVariants} className={styles.medium_card}>
             <div className={styles.card_text_container}>
               <h1 className={styles.card_number}>02</h1>
               <div className={styles.card_bottom_text_container}>
@@ -208,21 +231,22 @@ export default function Home() {
                   src="/assets/images/education.png"
                   alt="education_img"
                   fill
-                  objectFit="cover"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
             </div>
-          </div>
-          <div className={styles.dark_card}>
+          </motion.div>
+          <motion.div variants={cardVariants} className={styles.dark_card}>
             <div className={styles.card_text_container}>
               <h1 className={styles.card_number}>03</h1>
               <div className={styles.card_bottom_text_container}>
                 <h1 className={styles.card_heading}>Food Assistance</h1>
+
                 <p className={styles.card_description}>
                   We believe that sharing a meal is one of the most sacred ways
                   to show God’s love. Our church’s food pantry is more than a
                   distribution site—it is a ministry of grace. Guided by the
-                  call to love our neighbours as ours+elves, we provide
+                  call to love our neighbours as ourselves, we provide
                   nutritious food and essential supplies to families navigating
                   difficult seasons.
                 </p>
@@ -239,14 +263,13 @@ export default function Home() {
                   src="/assets/images/food.png"
                   alt="food_img"
                   fill
-                  objectFit="cover"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
-
       <section className={styles.contact_us}>
         <Logo />
         <div className={styles.contact_us_container}>
@@ -279,12 +302,11 @@ export default function Home() {
               src="/assets/images/employee.png"
               alt="employee_img"
               fill
-              objectFit="cover"
+              style={{ objectFit: "cover" }}
             />
           </div>
         </div>
       </section>
-
       <footer className={styles.footer}>
         <Icon icon="footerlogo" />
         <div className={styles.footer_right_container}>
@@ -302,10 +324,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{
-              once: false,
-              amount: 0.1,
-            }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={smoothTransition}
             className={styles.footer_links_container}
           >
