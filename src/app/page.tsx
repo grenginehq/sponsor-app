@@ -14,7 +14,7 @@ import { useForm } from "react-hook-form";
 import { useGetNewsQuery } from "@/services/newsApi";
 import { useMemo } from "react";
 import Logo from "@/components/Logos";
-import { style } from "framer-motion/m";
+import Link from "next/link";
 
 export default function Home() {
   const { control } = useForm();
@@ -44,7 +44,17 @@ export default function Home() {
       <section className={styles.about_section}>
         <h1>The Vision Behind Bethseda</h1>
         <div className={styles.about_container}>
-          <div className={styles.about_text_container}>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{
+              once: false,
+              amount: 0.2,
+              margin: "-50px",
+            }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className={styles.about_text_container}
+          >
             <p className={styles.about_text_bold}>
               Bethesda is a registered charity committed to transforming lives
               through faith, compassion, and action.
@@ -65,7 +75,7 @@ export default function Home() {
               supporting personal growth, and fostering a sense of community and
               connection.
             </p>
-          </div>
+          </motion.div>
           <div className={styles.about_image_container}>
             <Image
               src="/assets/images/reverend.png"
@@ -102,8 +112,24 @@ export default function Home() {
                 }}
                 transition={{
                   type: "spring",
-                  stiffness: 300,
-                  damping: 20,
+                  stiffness: 70,
+                  damping: 15,
+                }}
+                initial={{
+                  opacity: 0,
+                  y: 60,
+                  scale: 0.95,
+                  rotateX: 10,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  rotateX: 0,
+                }}
+                viewport={{ once: false, amount: 0.25 }}
+                style={{
+                  perspective: 1000,
                 }}
                 key={index + 1}
                 className={styles.projects_card}
@@ -256,13 +282,23 @@ export default function Home() {
               <Icon icon="linkedin" />
             </div>
           </div>
-          <div className={styles.footer_links_container}>
-            <a className={styles.footer_links}>Home</a>
-            <a className={styles.footer_links}>About</a>
-            <a className={styles.footer_links}>Community</a>
-            <a className={styles.footer_links}>In The News</a>
-            <a className={styles.footer_links}>Contact Us</a>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{
+              once: false,
+              amount: 0.2,
+              margin: "-50px",
+            }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className={styles.footer_links_container}
+          >
+            <Link className={styles.footer_links} href={""}>Home</Link>
+            <Link className={styles.footer_links} href={""}>About</Link>
+            <Link className={styles.footer_links} href={""}>Community</Link>
+            <Link className={styles.footer_links} href={""}>In The News</Link>
+            <Link className={styles.footer_links} href={""}>Contact Us</Link>
+          </motion.div>
         </div>
       </footer>
     </div>
