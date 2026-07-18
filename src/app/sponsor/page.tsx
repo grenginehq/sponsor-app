@@ -12,17 +12,7 @@ export default function Sponsor() {
       <header className={styles.sponsor_header}>
         <Icon icon="logo2" />
       </header>
-      <div className={styles.sponsor_form}>
-        <FirstStep control={control} />
-        <div className={styles.sponsor_form_image}>
-          <Image
-            src={"/assets/images/abstract_1.png"}
-            alt={"abstract_1"}
-            fill
-            style={{ objectFit: "cover" }}
-          />
-        </div>
-      </div>
+      <FirstStep control={control} />
     </div>
   );
 }

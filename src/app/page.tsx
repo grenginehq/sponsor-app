@@ -46,31 +46,31 @@ const projectCardVariants = {
 } as const;
 
 const cardContainerVariants = {
-  hidden: { 
-    opacity: 0, 
-    y: 80 
+  hidden: {
+    opacity: 0,
+    y: 80,
   },
   visible: {
     opacity: 1,
-    y: 0, 
+    y: 0,
     transition: {
       type: "spring",
       stiffness: 55,
       damping: 15,
-      delayChildren: 0.2 
+      delayChildren: 0.2,
     },
   },
 } as const;
 
 const cardVariants = {
-  hidden: { 
-    opacity: 0 
+  hidden: {
+    opacity: 0,
   },
-  visible: { 
-    opacity: 1, 
-    transition: { duration: 0.5 }
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.5 },
   },
-} as const
+} as const;
 
 export default function Home() {
   const { control } = useForm();
@@ -101,7 +101,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.15 }} 
+            viewport={{ once: false, amount: 0.15 }}
             transition={smoothTransition}
             className={styles.about_text_container}
           >
@@ -282,17 +282,19 @@ export default function Home() {
               message and we’ll be in touch soon
             </p>
             <form className={styles.contact_us_input_container}>
-              <Input control={control} type="text" name="name" label="NAME" />
+              <Input variant="outlined" control={control} type="text" name="name" label="NAME" />
               <Input
                 control={control}
                 type="email"
                 name="email"
+                variant="outlined"
                 label="EMAIL ADDRESS"
               />
               <Input
                 control={control}
                 type="text"
                 name="message"
+                variant="outlined"
                 label="MESSAGE"
               />
             </form>

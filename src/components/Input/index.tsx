@@ -4,6 +4,7 @@ import { Control, useController } from "react-hook-form";
 import { IconNames } from "../../types/icon";
 import { Icon } from "../Icon";
 import styles from "./input.module.css";
+import classNames from "classnames";
 
 interface InputProps {
   label?: string;
@@ -21,6 +22,7 @@ interface InputProps {
   autoComplete?: string;
   onChange?: () => void;
   rules?: any;
+  variant: "outlined" | "filled";
 }
 
 export const Input = ({
@@ -38,6 +40,7 @@ export const Input = ({
   autoComplete,
   onChange,
   rules,
+  variant,
 }: InputProps) => {
   const { field, fieldState } = useController({ control, name, rules });
   const { error } = fieldState;
@@ -64,34 +67,44 @@ export const Input = ({
     return autoCompleteMap[name as string] || "off";
   };
 
+  const inputLabelClasses = classNames(styles.input_label, {
+    [styles.input_label_outlined]: variant === "outlined",
+    [styles.input_label_filled]: variant === "filled",
+  });
+
+  const inputContainerClasses = classNames(styles.input_container, {
+    [styles.input_container_outlined]: variant === "outlined",
+    [styles.input_container_filled]: variant === "filled",
+  });
+
   return (
     <>
-      <label className={styles.input_label} htmlFor={name}>
+      <label className={inputLabelClasses} htmlFor={name}>
         {label}
-        <div className={styles.input_container}>
-          {icon && <Icon icon={icon} />}
-          <input
-            id={name}
-            type={type}
-            readOnly={disabled}
-            placeholder={placeholder}
-            {...field}
-            onChange={(e) => {
-              field.onChange(e);
-              onChange?.();
-            }}
-            min={min}
-            autoFocus={autoFocus}
-            autoComplete={getAutoCompleteValue()}
-            data-form-type="other"
-            data-lpignore={type === "password" ? "true" : undefined}
-            spellCheck="false"
-            disabled={disabled}
-            className={styles.input}
-          />
-        </div>
-        {error && <div className={styles.input_error}>{error?.message}</div>}
       </label>
+      <div className={inputContainerClasses}>
+        {icon && <Icon icon={icon} />}
+        <input
+          id={name}
+          type={type}
+          readOnly={disabled}
+          placeholder={placeholder}
+          {...field}
+          onChange={(e) => {
+            field.onChange(e);
+            onChange?.();
+          }}
+          min={min}
+          autoFocus={autoFocus}
+          autoComplete={getAutoCompleteValue()}
+          data-form-type="other"
+          data-lpignore={type === "password" ? "true" : undefined}
+          spellCheck="false"
+          disabled={disabled}
+          className={styles.input}
+        />
+      </div>
+      {error && <div className={styles.input_error}>{error?.message}</div>}
     </>
   );
 };

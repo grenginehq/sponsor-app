@@ -1,13 +1,21 @@
 .input_container {
-  --border-color: rgba(180, 180, 180, 0.5);
   transition: all 0.3s ease-in-out;
   display: flex;
   align-items: center;
   width: 100%;
   height: 52px;
-  border: 1px solid var(--gray);
   padding: 8px;
   border-radius: 8px;
+
+}
+
+.input_container_filled {
+border: 1px solid var(--secondary01);
+background: var(--secondary12);
+}
+
+.input_container_outlined {
+  border: 1px solid var(--gray);
 }
 
 .input {
@@ -15,12 +23,13 @@
   border: none;
   background-color: transparent;
   font-weight: 500;
-  font-style: Medium;
+  font-style: medium;
   font-size: 14.1px;
   line-height: 20.02px;
   letter-spacing: 1.68px;
   vertical-align: middle;
   color: var(--primary);
+  font-family: var(--font-inter);
 
   &::placeholder {
     color: var(--black);
@@ -36,11 +45,20 @@
 .input_label {
   color: var(--black);
   font-family: var(--font-instrument-sans);
-  font-size: 16px;
-  font-style: medium;
-  font-weight: 500;
   line-height: 100%;
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.input_label_filled {
+  font-size: 24px;
+  font-style: regular;
+  font-weight: 400;
+}
+
+.input_label_outlined {
+  font-size: 16px;
+  font-style: medium;
+  font-weight: 500;
 }

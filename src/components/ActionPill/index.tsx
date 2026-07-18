@@ -25,11 +25,7 @@ export const ActionPill = ({ label, name, control }: ActionPillProps) => {
   });
 
   return (
-    <button
-      type="button"
-      className={styles.actionPillClasses}
-      onClick={handleToggle}
-    >
+    <button type="button" className={actionPillClasses} onClick={handleToggle}>
       {label}
       {toggleActionPill && <Icon icon="tick" />}
     </button>
