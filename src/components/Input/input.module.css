@@ -23,8 +23,7 @@
   color: var(--primary);
 
   &::placeholder {
-    color: var(--b);
-    font-family: Inter;
+    color: var(--black);
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -36,8 +35,7 @@
 
 .input_label {
   color: var(--black);
-  font-family: var(--font-instrument-serif);
-  font-family: var(--font-instrument-inter);
+  font-family: var(--font-instrument-sans);
   font-size: 16px;
   font-style: medium;
   font-weight: 500;
