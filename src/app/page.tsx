@@ -301,17 +301,19 @@ export default function Home() {
               touch soon
             </p>
             <form className={styles.contact_us_input_container}>
-              <Input control={control} type="text" name="name" label="NAME" />
+              <Input variant="outlined" control={control} type="text" name="name" label="NAME" />
               <Input
                 control={control}
                 type="email"
                 name="email"
+                variant="outlined"
                 label="EMAIL ADDRESS"
               />
               <Input
                 control={control}
                 type="text"
                 name="message"
+                variant="outlined"
                 label="MESSAGE"
               />
             </form>

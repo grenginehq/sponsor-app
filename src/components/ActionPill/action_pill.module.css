@@ -1,6 +1,6 @@
 .action_pill {
   border-radius: 50px;
-  background: rgba(205, 205, 205, 0.4);
+  background-color: var(--secondary07);
   display: flex;
   padding: 8px 16px;
   align-items: center;
@@ -11,9 +11,15 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  transition: all 1s ease-in-out;
+}
+
+.action_pill:hover {
+  background: var(--secondary06);
+  color: var(--secondary02);
 }
 
 .action_pill_active {
-  background: var(--secondary01);
+  background: var(--secondary06);
   color: var(--secondary02);
 }

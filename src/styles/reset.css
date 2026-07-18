@@ -1,7 +1,7 @@
 :root {
   --primary: #5c247f;
   --white: #ffffff;
-  --secondary01: #5c247f;
+  --secondary01: #E2E2E2;
   --secondary02: #7a7add;
   --secondary03: #e2cfea;
   --secondary04: #00000066;
@@ -10,8 +10,9 @@
   --secondary07: rgba(205, 205, 205, 0.4);
   --secondary08: #f0ba00;
   --secondary09: #00000080;
-  --secondary10: rgba(240, 186, 0, 0.50);
+  --secondary10: rgba(240, 186, 0, 0.5);
   --secondary11: rgba(246, 211, 102, 0.5);
+  --secondary12: rgba(234, 234, 234, 0.70);
   --gray: #b4b4b4;
   --black: #000;
   --black02: rgba(0, 0, 0, 0.4);
