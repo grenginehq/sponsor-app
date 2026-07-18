@@ -8,11 +8,27 @@
   gap: 16px;
   padding: 0px 48px 128px 48px;
 }
+@media only screen and (max-width: 390px) {
+  .about_section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 64px 16px;
+  }
+}
 .about_container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: stretch;
   gap: 48px;
+}
+@media only screen and (max-width: 390px) {
+  .about_container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 100%;
+  }
 }
 .about_text_container {
   display: flex;
@@ -32,18 +48,37 @@
   letter-spacing: 0%;
   font-weight: 500;
 }
+@media only screen and (max-width: 390px) {
+  .about_text_bold {
+    font-size: 16px;
+  }
+  .about_text {
+    font-size: 16px;
+  }
+}
 .about_image_container {
   position: relative;
   width: 100%;
-  height: 100%; 
-  min-height: 300px; 
+  height: 100%;
+  min-height: 300px;
   overflow: hidden;
-  & img{
+  & img {
     height: auto !important;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .about_image_container {
+    height: 100%;
+    min-height: 156px;
   }
 }
 .grid_container {
   padding: 0px 0px 128px 0px;
+}
+@media only screen and (max-width: 390px) {
+  .grid_container {
+    padding: 0px 0px 0px 0px;
+  }
 }
 .purpose_container {
   padding: 126px 48px 126px 48px;
@@ -129,6 +164,13 @@
   justify-content: space-between;
   padding: 0px 48px;
 }
+@media only screen and (max-width: 390px) {
+  .project_top_container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0px 16px;
+  }
+}
 .project_text_container {
   flex-direction: column;
   display: flex;
@@ -140,7 +182,9 @@
   line-height: 100%;
   letter-spacing: 0%;
   font-style: medium;
-  @media only screen and (max-width: 390px) {
+}
+@media only screen and (max-width: 390px) {
+  .project_text_container_heading {
     font-size: 30px;
   }
 }
@@ -150,19 +194,25 @@
   font-style: regular;
   line-height: 100%;
   letter-spacing: 0%;
-  @media only screen and (max-width: 390px) {
-    display: none;
-  }
 }
 .project_text_container_mobile_title {
   display: none;
   font-size: 16px;
   font-weight: 400;
   font-style: regular;
-  @media only screen and (max-width: 390px) {
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+@media only screen and (max-width: 390px) {
+  .project_text_container_mobile_title {
     display: block;
-    text-align: center;
   }
+  .project_text_container_title {
+    display: none;
+  }
+}
+.project_button_container {
+  align-self: flex-end;
 }
 .projects_card_container {
   display: grid;
@@ -197,6 +247,13 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
+}
+@media only screen and (max-width: 390px) {
+  .contact_us_container {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 16px;
+  }
 }
 .contact_us_form_container {
   display: flex;
@@ -243,6 +300,13 @@
   line-height: 100%;
   color: var(--secondary04);
 }
+.contact_us_text_mobile_container_title {
+  display: none;
+  font-size: 16px;
+  font-style: light;
+  font-weight: 300;
+  line-height: 100%;
+}
 .contact_us_text_container_email {
   font-size: 60px;
   font-weight: 400;
@@ -251,8 +315,18 @@
   display: flex;
   align-items: center;
   height: 100%;
-  @media only screen and (max-width: 390px) {
+}
+@media only screen and (max-width: 390px) {
+  .contact_us_text_container_email {
     font-size: 30px;
+  }
+  .contact_us_text_container_title {
+    display: none;
+  }
+  .contact_us_text_mobile_container_title {
+    display: block;
+    color: var(--secondary04);
+    /* color: red; */
   }
 }
 .contact_us_input_container {
@@ -281,10 +355,13 @@
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   background: var(--black);
-  @media only screen and (max-width: 390px) {
+}
+@media only screen and (max-width: 390px) {
+  .footer {
+    display: flex;
     flex-direction: column;
     gap: 48px;
-    padding-top: 0px;
+    padding: 64px 48px 128px 48px;
   }
 }
 .footer_right_container {
@@ -316,6 +393,14 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
 }
+@media only screen and (max-width: 390px) {
+  .footer_links_container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-top: 0px;
+  }
+}
 .footer_links {
   font-size: 14px;
   line-height: 20px;
@@ -327,13 +412,13 @@
   }
 }
 .card_section {
-<<<<<<< HEAD
-  padding: 48px 48px 176px 48px;
-=======
   padding: 0px 48px 128px 48px;
->>>>>>> f29e298e16fde7acde96b4859911b4e1de370a8f
 }
-
+@media only screen and (max-width: 390px) {
+  .card_section {
+    padding: 0px 16px 64px 16px;
+  }
+}
 .cards_container {
   display: flex;
   flex-direction: column;
@@ -350,6 +435,15 @@
   position: sticky;
   left: 0;
   top: 0;
+}
+@media only screen and (max-width: 390px) {
+  .light_card,
+  .medium_card,
+  .dark_card {
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .light_card {
   padding-top: 48px;
@@ -373,10 +467,34 @@
   flex-direction: column;
   gap: 60px;
 }
+@media only screen and (max-width: 390px) {
+  .card_text_container {
+    gap: 30px;
+  }
+  .dark_card {
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.card_bottom_text_mobile_container {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
 .card_bottom_text_container {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+@media only screen and (max-width: 390px) {
+  .card_bottom_text_container {
+    display: none;
+  }
+  .card_bottom_text_mobile_container {
+    display: flex;
+  }
 }
 .card_number {
   font-size: 75px;
@@ -389,6 +507,11 @@
   font-style: semibold;
   color: var(--black);
   font-weight: 600;
+}
+@media only screen and (max-width: 390px) {
+  .card_heading {
+    font-size: 30px;
+  }
 }
 .card_description {
   font-size: 16px;
@@ -403,10 +526,23 @@
   width: 438px;
   height: 430px;
 }
+@media only screen and (max-width: 390px) {
+  .card_image {
+    width: 194px;
+    height: 167px;
+    align-self: flex-start;
+  }
+}
 .card_image_container {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 390px) {
+  .mobile_logos_container {
+    display: none;
+  }
 }

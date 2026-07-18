@@ -32,6 +32,9 @@ export const Header = () => {
           Donate now
         </Button>
       </div>
+      <div className={styles.nav_bar}>
+        <Icon icon="navBar" />
+      </div>
     </header>
   );
 };

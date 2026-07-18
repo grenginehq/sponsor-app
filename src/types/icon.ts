@@ -22,4 +22,6 @@ export type IconNames =
   | "vena"
   | "passporthealth"
   | "logo2"
-  | "footerlogo";
+  | "logo3"
+  | "footerlogo"
+  | "navBar";

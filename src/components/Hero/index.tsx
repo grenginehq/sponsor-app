@@ -24,7 +24,7 @@ export const Hero = () => {
           </p>
           <p className={styles.mobile_description}>
             Help us bring our project to life while <br /> making impact to the
-            community at <br /> large.
+            community at large.
           </p>
           <Button type="button" variant="primary" label="Donate Now" />
         </div>

@@ -13,6 +13,9 @@
     width: 1440px;
     padding: 0px;
   }
+  @media only screen and (max-width: 390px) {
+    padding-left: 16px;
+  }
 }
 
 .logo_container {
@@ -20,7 +23,12 @@
   align-items: center;
   gap: 32px;
 }
-
+.nav_bar {
+  display: none;
+  @media only screen and (max-width: 390px) {
+    display: block;
+  }
+}
 .nav {
   display: flex;
   gap: space-between;
@@ -45,6 +53,10 @@
   & svg {
     width: 205.36px;
     height: 70px;
+    @media only screen and (max-width: 390px) {
+      width: 64px;
+      height: 70px;
+    }
   }
 }
 .header_button_container {

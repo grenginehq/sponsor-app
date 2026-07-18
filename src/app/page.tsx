@@ -46,31 +46,31 @@ const projectCardVariants = {
 } as const;
 
 const cardContainerVariants = {
-  hidden: { 
-    opacity: 0, 
-    y: 80 
+  hidden: {
+    opacity: 0,
+    y: 80,
   },
   visible: {
     opacity: 1,
-    y: 0, 
+    y: 0,
     transition: {
       type: "spring",
       stiffness: 55,
       damping: 15,
-      delayChildren: 0.2 
+      delayChildren: 0.2,
     },
   },
 } as const;
 
 const cardVariants = {
-  hidden: { 
-    opacity: 0 
+  hidden: {
+    opacity: 0,
   },
-  visible: { 
-    opacity: 1, 
-    transition: { duration: 0.5 }
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.5 },
   },
-} as const
+} as const;
 
 export default function Home() {
   const { control } = useForm();
@@ -101,7 +101,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.15 }} 
+            viewport={{ once: false, amount: 0.15 }}
             transition={smoothTransition}
             className={styles.about_text_container}
           >
@@ -138,10 +138,16 @@ export default function Home() {
                 Make a difference by choosing a project to start with. Select a
                 project to get you started.
               </p>
+              <p className={styles.project_text_container_mobile_title}>
+                Make a difference by choosing a project to start with. Select a
+                project to get you <br /> started.
+              </p>
             </div>
-            <Button type="button" variant="primary">
-              Donate Now
-            </Button>
+            <div className={styles.project_button_container}>
+              <Button type="button" variant="primary">
+                Donate Now
+              </Button>
+            </div>
           </div>
           <motion.div
             className={styles.projects_card_container}
@@ -256,6 +262,13 @@ export default function Home() {
                   stability, dignity, and hope they deserve.
                 </p>
               </div>
+              <div className={styles.card_bottom_text_mobile_container}>
+                <h1 className={styles.card_heading}>Food Assistance</h1>
+                <p className={styles.card_description}>
+                  Our food bank provides essential supplies to families, helping
+                  them regain stability and hope.
+                </p>
+              </div>
             </div>
             <div className={styles.card_image_container}>
               <div className={styles.card_image}>
@@ -271,7 +284,9 @@ export default function Home() {
         </motion.div>
       </section>
       <section className={styles.contact_us}>
-        <Logo />
+        <div className={styles.mobile_logos_container}>
+          <Logo />
+        </div>
         <div className={styles.contact_us_container}>
           <div className={styles.contact_us_form_container}>
             <h1 className={styles.contact_us_text_container_heading}>
@@ -280,6 +295,10 @@ export default function Home() {
             <p className={styles.contact_us_text_container_title}>
               We’d love to hear from you - send us a <br />
               message and we’ll be in touch soon
+            </p>
+            <p className={styles.contact_us_text_mobile_container_title}>
+              We’d love to hear from you - send us a message and we’ll be in
+              touch soon
             </p>
             <form className={styles.contact_us_input_container}>
               <Input control={control} type="text" name="name" label="NAME" />
