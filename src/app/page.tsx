@@ -101,7 +101,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.15 }} // "once: true" eliminates stuttering layouts
+            viewport={{ once: false, amount: 0.15 }} 
             transition={smoothTransition}
             className={styles.about_text_container}
           >
@@ -198,8 +198,8 @@ export default function Home() {
             <div className={styles.card_image_container}>
               <div className={styles.card_image}>
                 <Image
-                  src="/assets/images/unity.png"
-                  alt="unity_img"
+                  src="/assets/images/wellbeing.png"
+                  alt="wellbeing_img"
                   fill
                   style={{ objectFit: "cover" }}
                 />

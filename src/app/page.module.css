@@ -11,6 +11,7 @@
 .about_container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
   gap: 48px;
 }
 .about_text_container {
@@ -34,7 +35,12 @@
 .about_image_container {
   position: relative;
   width: 100%;
-  object-fit: cover;
+  height: 100%; 
+  min-height: 300px; 
+  overflow: hidden;
+  & img{
+    height: auto !important;
+  }
 }
 .grid_container {
   padding: 0px 0px 128px 0px;
