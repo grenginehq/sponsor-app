@@ -10,7 +10,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .contact_us_container {
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
   border-radius: 8px;
   gap: 24px;
   background-color: rgba(255, 255, 255, 0.2);
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -46,7 +46,7 @@
   border-radius: 8px;
   overflow: hidden;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .contact_us_image_container {
     width: 358px;
     height: 358px;
@@ -57,7 +57,7 @@
   line-height: 60px;
   letter-spacing: -0.2px;
   font-weight: 500;
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     font-size: 30px;
   }
 }
@@ -84,7 +84,7 @@
   align-items: center;
   height: 100%;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .contact_us_text_container_email {
     font-size: 30px;
   }
@@ -113,7 +113,7 @@
   font-size: 48px;
   font-family: var(--font-instrument-sans);
   font-weight: 400;
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     font-size: 24px;
   }
 }
@@ -124,7 +124,7 @@
   width: 100%;
   background: var(--black);
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .footer {
     display: flex;
     flex-direction: column;
@@ -145,7 +145,7 @@
   gap: 16px;
   display: flex;
   align-items: center;
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     padding-left: 0px;
   }
 }
@@ -161,7 +161,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .footer_links_container {
     display: flex;
     flex-direction: column;
@@ -175,7 +175,7 @@
   letter-spacing: 1.68px;
   font-weight: 500;
   color: var(--white);
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     padding-right: 0px;
   }
 }

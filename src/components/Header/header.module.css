@@ -13,7 +13,7 @@
     width: 1440px;
     padding: 0px;
   }
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     padding-left: 16px;
   }
 }
@@ -25,7 +25,7 @@
 }
 .nav_bar {
   display: none;
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     display: block;
   }
 }
@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     display: none;
   }
 }
@@ -53,14 +53,14 @@
   & svg {
     width: 205.36px;
     height: 70px;
-    @media only screen and (max-width: 390px) {
+    @media only screen and (max-width: 480px) {
       width: 64px;
       height: 70px;
     }
   }
 }
 .header_button_container {
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     display: none;
   }
 }

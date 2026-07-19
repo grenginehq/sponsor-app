@@ -8,7 +8,7 @@
   gap: 16px;
   padding: 0px 48px 128px 48px;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .about_section {
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
   align-items: stretch;
   gap: 48px;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .about_container {
     display: flex;
     flex-direction: column-reverse;
@@ -48,7 +48,7 @@
   letter-spacing: 0%;
   font-weight: 500;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .about_text_bold {
     font-size: 16px;
   }
@@ -66,7 +66,7 @@
     height: auto !important;
   }
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .about_image_container {
     height: 100%;
     min-height: 156px;
@@ -75,7 +75,7 @@
 .grid_container {
   padding: 0px 0px 128px 0px;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .grid_container {
     padding: 0px 0px 0px 0px;
   }
@@ -85,7 +85,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     grid-template-columns: 1fr;
   }
 
@@ -99,9 +99,6 @@
 .purpose_images_container {
   display: flex;
   gap: 24px;
-  @media only screen and (max-width: 390px) {
-    /* display: none; */ /* if i do not comment it none of the logos will show */
-  }
 }
 .purpose_mobile_images_container {
   display: none;
@@ -124,7 +121,7 @@
     transparent 100%
   );
 
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     display: flex;
     gap: 24px;
   }
@@ -164,7 +161,7 @@
   justify-content: space-between;
   padding: 0px 48px;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .project_top_container {
     flex-direction: column;
     gap: 16px;
@@ -183,7 +180,7 @@
   letter-spacing: 0%;
   font-style: medium;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .project_text_container_heading {
     font-size: 30px;
   }
@@ -203,7 +200,7 @@
   line-height: 100%;
   letter-spacing: 0%;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .project_text_container_mobile_title {
     display: block;
   }
@@ -220,7 +217,7 @@
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     display: flex;
     flex-direction: column;
   }
@@ -240,7 +237,7 @@
 .card_section {
   padding: 0px 48px 128px 48px;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .card_section {
     padding: 0px 16px 64px 16px;
   }
@@ -262,7 +259,7 @@
   left: 0;
   top: 0;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .light_card,
   .medium_card,
   .dark_card {
@@ -293,7 +290,7 @@
   flex-direction: column;
   gap: 60px;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .card_text_container {
     gap: 30px;
   }
@@ -314,7 +311,7 @@
   flex-direction: column;
   gap: 10px;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .card_bottom_text_container {
     display: none;
   }
@@ -334,7 +331,7 @@
   color: var(--black);
   font-weight: 600;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .card_heading {
     font-size: 30px;
   }
@@ -352,7 +349,7 @@
   width: 438px;
   height: 430px;
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .card_image {
     width: 194px;
     height: 167px;
@@ -367,7 +364,7 @@
   align-items: center;
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 480px) {
   .mobile_logos_container {
     display: none;
   }
