@@ -1,0 +1,17 @@
+.image_container {
+  position: relative;
+  height: 536px;
+}
+.text_container {
+  padding: 64px 48px;
+}
+.about_text_bold {
+  font-size: 32px;
+  font-style: regular;
+  font-weight: 400;
+  color: var(--black);
+  font-family: var(--font-);
+}
+.about_text {
+  font-size: 16px;
+}

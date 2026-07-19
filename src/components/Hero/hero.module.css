@@ -6,6 +6,11 @@
   overflow: hidden;
   position: relative;
 }
+@media only screen and (max-width: 1024px) {
+  .hero_container {
+    height: 100%;
+  }
+}
 @media only screen and (max-width: 480px) {
   .hero_container {
     height: 100%;
@@ -16,6 +21,13 @@
   flex-direction: column;
   gap: 32px;
   align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .inner_container {
+    height: calc(1000px - 128px);
+    padding: 0px 16px;
+    justify-content: center;
+  }
 }
 @media only screen and (max-width: 480px) {
   .inner_container {

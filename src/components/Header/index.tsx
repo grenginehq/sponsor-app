@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { Button } from "../Button";
 import { Icon } from "../Icon";
@@ -13,13 +14,13 @@ export const Header = () => {
       </div>
       <nav className={styles.nav}>
         {/* <Icon icon="search" /> */}
-        <Link className={styles.nav_link} href={""}>
+        <Link className={styles.nav_link} href="/about">
           About{" "}
         </Link>
         <Link className={styles.nav_link} href={""}>
           Community Food Bank
         </Link>
-        <Link className={styles.nav_link} href={""}>
+        {/* <Link className={styles.nav_link} href={""}>
           Educational Programs
         </Link>
         <Link className={styles.nav_link} href={""}>
@@ -27,7 +28,7 @@ export const Header = () => {
         </Link>{" "}
         <Link className={styles.nav_link} href={""}>
           Contact Us
-        </Link>
+        </Link> */}
       </nav>
       <div className={styles.header_button_container}>
         <Button
