@@ -37,7 +37,7 @@
 }
 .about_text {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 28px;
   letter-spacing: 0%;
   text-align: justify;
@@ -188,7 +188,7 @@
 }
 .project_text_container_title {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   font-style: regular;
   line-height: 100%;
   letter-spacing: 0%;
@@ -196,7 +196,7 @@
 .project_text_container_mobile_title {
   display: none;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   font-style: regular;
   line-height: 100%;
   letter-spacing: 0%;
@@ -218,9 +218,12 @@
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  @media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 480px) {
+  .projects_card_container {
     display: flex;
     flex-direction: column;
+    padding: 0px 16px;
   }
 }
 .projects_card {
@@ -355,6 +358,7 @@
     width: 194px;
     height: 167px;
     align-self: flex-start;
+    margin-top: 24px;
   }
 }
 .card_image_container {

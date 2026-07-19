@@ -12,7 +12,7 @@ import { IconNames } from "@/types/icon";
 import { useForm } from "react-hook-form";
 import { useGetNewsQuery } from "@/services/newsApi";
 import { useMemo } from "react";
-import Logo from "@/components/Logos";
+import Logos from "@/components/Logos";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
@@ -74,28 +74,10 @@ const cardVariants = {
 } as const;
 
 export default function Home() {
-  const { control } = useForm();
-
   return (
     <div className={styles.main_container}>
       <Header />
-      <div></div>
       <Hero />
-      <motion.section
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{
-          ease: "linear",
-          duration: 20,
-          repeat: Infinity,
-        }}
-        className={styles.grid_container}
-      >
-        <div className={styles.marquee_track}>
-          {images.concat(images).map((image, index) => (
-            <div key={index + 1} className={styles.hero_image}></div>
-          ))}
-        </div>
-      </motion.section>
       <section className={styles.about_section}>
         <h1>The Vision Behind Bethseda</h1>
         <div className={styles.about_container}>
@@ -132,7 +114,7 @@ export default function Home() {
         </div>
       </section>
       <div>
-        <Logo />
+        <Logos />
         <section className={styles.project_container}>
           <div className={styles.project_top_container}>
             <div className={styles.project_text_container}>
@@ -165,7 +147,7 @@ export default function Home() {
               <motion.div
                 key={index + 1}
                 className={styles.projects_card}
-                variants={projectCardVariants} // Inherits visible/hidden logic smoothly
+                variants={projectCardVariants}
                 whileHover={{
                   scale: 1.03,
                   y: -4,
@@ -205,6 +187,14 @@ export default function Home() {
                   stability, dignity, and hope they deserve.
                 </p>
               </div>
+              <div className={styles.card_bottom_text_mobile_container}>
+                <h1 className={styles.card_heading}>Unity and Wellbeing</h1>
+                <p className={styles.card_description}>
+                  By easing the immediate burden of hunger, we seek to be the
+                  hands and feet of Jesus, helping our community regain the
+                  stability, dignity, and hope they deserve.
+                </p>
+              </div>
             </div>
             <div className={styles.card_image_container}>
               <div className={styles.card_image}>
@@ -230,6 +220,14 @@ export default function Home() {
                   their own path to success.
                 </p>
                 <p className={styles.desccription}>
+                  As a foundation, we provide the vital resources and
+                  wrap-around support needed to turn hope into sustainable
+                  independence.
+                </p>
+              </div>
+              <div className={styles.card_bottom_text_mobile_container}>
+                <h1 className={styles.card_heading}>Education for All</h1>
+                <p className={styles.card_description}>
                   As a foundation, we provide the vital resources and
                   wrap-around support needed to turn hope into sustainable
                   independence.

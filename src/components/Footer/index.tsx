@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
       </section>
       <footer className={styles.footer}>
-        <Icon icon="footerlogo" />
+        <Icon className={styles.footer_logo} icon="footerlogo" />
         <div className={styles.footer_right_container}>
           <div className={styles.footer_logos_container}>
             <div className={styles.footer_logo_container}>

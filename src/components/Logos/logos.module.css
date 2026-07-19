@@ -1,9 +1,15 @@
 .main_container {
   display: flex;
   justify-content: center;
+  align-items: center;
   background: var(--black);
   align-items: center;
   padding: 15px 153px;
+}
+@media only screen and (max-width: 480px) {
+  .inner_container {
+    padding: 32px 0px;
+  }
 }
 .inner_container {
   display: flex;
