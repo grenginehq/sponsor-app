@@ -6,12 +6,11 @@
   height: 52px;
   padding: 8px;
   border-radius: 8px;
-
 }
 
 .input_container_filled {
-border: 1px solid var(--secondary01);
-background: var(--secondary12);
+  border: 1px solid var(--secondary01);
+  background: var(--secondary12);
 }
 
 .input_container_outlined {
@@ -28,7 +27,7 @@ background: var(--secondary12);
   line-height: 20.02px;
   letter-spacing: 1.68px;
   vertical-align: middle;
-  color: var(--primary);
+  color: var(--black);
   font-family: var(--font-inter);
 
   &::placeholder {

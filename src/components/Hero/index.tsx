@@ -6,8 +6,10 @@ import { Pill } from "../Pill";
 import styles from "./hero.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export const Hero = () => {
+  const router = useRouter();
   return (
     <div className={styles.hero_container}>
       <div className={styles.inner_container}>
@@ -26,7 +28,12 @@ export const Hero = () => {
             Help us bring our project to life while <br /> making impact to the
             community at large.
           </p>
-          <Button type="button" variant="primary" label="Donate Now" />
+          <Button
+            handleClick={() => router.push("/sponsor")}
+            type="button"
+            variant="primary"
+            label="Donate Now"
+          />
         </div>
       </div>
 

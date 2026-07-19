@@ -40,7 +40,7 @@
   gap: 24px;
 }
 
-.first_step_button{
+.first_step_button {
   display: flex;
   justify-content: flex-end;
   align-items: center;
