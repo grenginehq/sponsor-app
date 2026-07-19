@@ -10,8 +10,35 @@
   font-style: regular;
   font-weight: 400;
   color: var(--black);
-  font-family: var(--font-);
+  font-family: var(--font-inter);
+  letter-spacing: 0%;
+  line-height: 100%;
 }
 .about_text {
-  font-size: 16px;
+  font-size: 32px;
+  font-style: light;
+  font-weight: 300;
+  color: var(--black);
+  font-family: var(--font-inter);
+  letter-spacing: 0%;
+  line-height: 100%;
+}
+.mission_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 96px 48px 64px 48px;
+}
+.mission_container_heading {
+  font-size: 32px;
+  font-weight: 700;
+  font-style: bold;
+}
+.mission_container_text {
+  font-size: 32px;
+  font-style: light;
+  font-weight: 300;
+  color: var(--black);
+  font-family: var(--font-inter);
+  letter-spacing: 0%;
+  line-height: 100%;
 }
