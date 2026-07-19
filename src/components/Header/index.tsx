@@ -2,8 +2,10 @@ import Link from "next/link";
 import { Button } from "../Button";
 import { Icon } from "../Icon";
 import styles from "./header.module.css";
+import { useRouter } from "next/navigation";
 
 export const Header = () => {
+  const router = useRouter();
   return (
     <header className={styles.header}>
       <div className={styles.header_navigation}>
@@ -28,7 +30,11 @@ export const Header = () => {
         </Link>
       </nav>
       <div className={styles.header_button_container}>
-        <Button type="button" variant="primary">
+        <Button
+          handleClick={() => router.push("/sponsor")}
+          type="button"
+          variant="primary"
+        >
           Donate now
         </Button>
       </div>

@@ -107,14 +107,18 @@ export default function Home() {
             className={styles.about_text_container}
           >
             <p className={styles.about_text_bold}>
-              Bethesda is a registered charity committed to transforming lives
-              through faith, compassion, and action.
+              At Bethesda, we believe that lasting change begins with compassion
+              in action. Inspired by our Christian faith, we are committed to
+              restoring hope, empowering lives, and creating opportunities for
+              individuals and families to flourish.
             </p>
             <p className={styles.about_text}>
-              Rooted in the belief that every individual deserves dignity and
-              opportunity, we dedicate ourselves to addressing essential needs,
-              supporting personal growth, and fostering a sense of community and
-              connection.
+              Every person deserves to be treated with dignity, valued for who
+              they are, and given the opportunity to build a brighter future.
+              Through the generosity of our supporters and the dedication of our
+              volunteers and partners, we are making a lasting difference in
+              communities by meeting practical needs, inspiring hope, and
+              transforming lives.
             </p>
           </motion.div>
           <div className={styles.about_image_container}>

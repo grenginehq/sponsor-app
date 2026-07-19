@@ -8,8 +8,9 @@ import { Button } from "@/components/Button";
 
 interface FirstStepProps {
   control: Control<any>;
+  handleScreenChange: (screen: "firstStep" | "secondStep") => void;
 }
-export const FirstStep = ({ control }: FirstStepProps) => {
+export const FirstStep = ({ control, handleScreenChange }: FirstStepProps) => {
   return (
     <div className={styles.first_step}>
       <form className={styles.first_step_form}>
@@ -37,7 +38,12 @@ export const FirstStep = ({ control }: FirstStepProps) => {
           })}
         </div>
         <div className={styles.first_step_button}>
-          <Button type="submit" variant="primary" label="Next" />
+          <Button
+            handleClick={() => handleScreenChange("secondStep")}
+            type="button"
+            variant="primary"
+            label="Next"
+          />
         </div>
       </form>
       <div className={styles.first_step_image}>
