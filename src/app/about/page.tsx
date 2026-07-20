@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Footer from "@/components/Footer";
+import { Icon } from "@/components/Icon";
 export default function About() {
   return (
     <div>
@@ -39,7 +40,7 @@ export default function About() {
       </div>
       <div className={styles.mission_container}>
         <h1 className={styles.container_heading}>OUR MISSION</h1>
-        <p className={styles.mission_container_text}>
+        <p className={styles.container_text}>
           To demonstrate God's love through faith in action by meeting practical
           needs, empowering individuals and families, fostering compassionate
           communities, and creating opportunities that bring lasting hope and
@@ -49,12 +50,23 @@ export default function About() {
       <div className={styles.vision_container}>
         <h1 className={styles.container_heading}>OUR VISION</h1>
         <div className={styles.vision_bottom_container}>
-          <p className={styles.mission_container_text}>
-            To demonstrate God's love through faith in action by meeting
-            practical needs, empowering individuals and families, fostering
-            compassionate communities, and creating opportunities that bring
-            lasting hope and transformation.
-          </p>
+          <div className={styles.vision_flex_container}>
+            <div className={styles.vision_top_flex_container}>
+              <h1 className={styles.vision_heading}>TRANSFORMING LIVES</h1>
+              <Icon icon="yellowIcon" />
+            </div>
+            <p>To see lives transformed</p>
+            <div className={styles.vision_top_flex_container}>
+              <h1 className={styles.vision_text}>RESTORING HOPE</h1>
+              <Icon icon="grayIcon" />
+            </div>
+            <div className={styles.vision_building_flex_container}>
+              <h1 className={styles.vision_text}>
+                BUILDING STRONGER COMMUNITIES.
+              </h1>
+              <Icon icon="grayIcon" />
+            </div>
+          </div>
           <div className={styles.vision_image_container}>
             <Image
               src="/assets/images/vision.png"
@@ -63,6 +75,24 @@ export default function About() {
               style={{ objectFit: "cover" }}
             />
           </div>
+        </div>
+      </div>
+      <div className={styles.promise_container}>
+        <h1 className={styles.container_heading}>OUR PROMISE</h1>
+        <div className={styles.promise_text_container}>
+          <p className={styles.container_text}>
+            At Bethesda, we are committed to being faithful stewards of every
+            gift entrusted to us. We value integrity, transparency, compassion,
+            and excellence in all that we do.
+          </p>
+          <p className={styles.container_text}>
+            Together with our sponsors, partners, and supporters, we are
+            building a future where lives are transformed, hope is restored, and
+            communities flourish.
+          </p>
+          <p className={styles.container_text}>
+            Together, we can make a lasting difference.
+          </p>
         </div>
       </div>
       <Footer />

@@ -333,5 +333,17 @@ export const icons: Record<IconNames, string> = {
   arrowLeft: `<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.3333 15L17 8L10.3333 1M17 8L1 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-`
+`,
+  yellowIcon: `
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="14.9718" y="0.882221" width="19.9257" height="19.9257" transform="rotate(45 14.9718 0.882221)" fill="#F0BA00"/>
+<rect x="14.9718" y="0.882221" width="19.9257" height="19.9257" transform="rotate(45 14.9718 0.882221)" stroke="#F0BA00" stroke-width="1.24765"/>
+</svg>
+`,
+  grayIcon: `
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="29.9436" height="29.9436" fill="#B4B4B4"/>
+</svg>
+
+`,
 };

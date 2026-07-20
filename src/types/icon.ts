@@ -25,4 +25,6 @@ export type IconNames =
   | "logo3"
   | "footerlogo"
   | "navBar"
-  | "arrowLeft";
+  | "arrowLeft"
+  | "yellowIcon"
+  | "grayIcon";
