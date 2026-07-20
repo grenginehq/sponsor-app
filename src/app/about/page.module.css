@@ -12,22 +12,23 @@
 }
 .text_container {
   padding: 64px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .about_text_bold {
-  font-size: 32px;
+  font-size: 24px;
   font-style: regular;
   font-weight: 400;
   color: var(--black);
-  font-family: var(--font-inter);
   letter-spacing: 0%;
   line-height: 100%;
 }
 .about_text {
-  font-size: 32px;
+  font-size: 24px;
   font-style: light;
   font-weight: 300;
   color: var(--black);
-  font-family: var(--font-inter);
   letter-spacing: 0%;
   line-height: 100%;
 }
@@ -42,12 +43,11 @@
   font-style: bold;
 }
 .mission_container_text {
-  font-size: 32px;
+  font-size: 24px;
   letter-spacing: 0%;
   line-height: 100%;
   font-weight: 300;
   color: var(--black);
-  font-family: var(--font-inter);
 }
 .vision_container {
   display: flex;

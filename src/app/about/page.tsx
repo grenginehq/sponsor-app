@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import Image from "next/image";
-import styles from "./about.module.css";
+import styles from "./page.module.css";
 import Footer from "@/components/Footer";
 export default function About() {
   return (
@@ -8,7 +8,7 @@ export default function About() {
       <Header />
       <div className={styles.image_container}>
         <Image
-          src="/assets/images/about.png"
+          src="/assets/images/about.jpg"
           fill
           alt="about_image"
           style={{ objectFit: "cover", overflow: "hidden" }}
