@@ -14,6 +14,7 @@ export default function About() {
           alt="about_image"
           style={{ objectFit: "cover", overflow: "hidden" }}
         />
+        <div className={styles.image_text_container}>ABOUT US</div>
       </div>
       <div className={styles.text_container}>
         <p className={styles.about_text_bold}>

@@ -90,7 +90,7 @@ export default function Footer() {
             transition={smoothTransition}
             className={styles.footer_links_container}
           >
-            <Link className={styles.footer_links} href={""}>
+            <Link className={styles.footer_links} href={"/"}>
               Home
             </Link>
             <Link className={styles.footer_links} href={""}>
