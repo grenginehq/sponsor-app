@@ -6,7 +6,7 @@
   overflow: hidden;
   position: relative;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   .hero_container {
     height: 100%;
   }
@@ -22,7 +22,7 @@
   gap: 32px;
   align-items: center;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   .inner_container {
     height: calc(1000px - 128px);
     padding: 0px 16px;

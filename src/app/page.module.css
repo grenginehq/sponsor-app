@@ -8,7 +8,7 @@
   gap: 16px;
   padding: 128px 48px 128px 48px;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   .about_section {
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@
   align-items: stretch;
   gap: 48px;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   .about_container {
     display: flex;
     flex-direction: column;
@@ -83,7 +83,7 @@
     height: auto !important;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   .about_image_container {
     height: 100%;
     min-height: 524px;
@@ -183,12 +183,12 @@
   justify-content: space-between;
   padding: 0px 48px;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   .project_top_container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
-    padding: 0px 16px;
     width: 100%;
   }
 }
@@ -249,10 +249,9 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   .projects_card_container {
     grid-template-columns: repeat(3, 1fr);
-    padding: 0px 16px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -299,7 +298,7 @@
   left: 0;
   top: 0;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   .light_card,
   .medium_card,
   .dark_card {

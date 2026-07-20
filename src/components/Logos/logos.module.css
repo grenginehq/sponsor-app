@@ -7,7 +7,7 @@
   padding: 15px 153px;
 }
 @media only screen and (max-width: 480px) {
-  .inner_container {
+  .main_container {
     padding: 32px 0px;
   }
 }
@@ -16,10 +16,12 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
 }
+
 .logos_flex_container {
   display: flex;
-  gap: 105px;
+  gap: 48px;
 }
 .inner_tablet_container {
   display: none;
@@ -28,7 +30,7 @@
   justify-content: space-between;
   background: transparent;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   .inner_container {
     display: none;
   }
