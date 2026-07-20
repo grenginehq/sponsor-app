@@ -11,17 +11,6 @@ export default function Logos() {
         <Icon icon="vena" />
         <Icon icon="passporthealth" />
       </div>
-      <div className={styles.inner_tablet_container}>
-        <div className={styles.logos_flex_container}>
-          <Icon icon="skykick" />
-          <Icon icon="notch" />
-        </div>
-        <div className={styles.logos_flex_container}>
-          <Icon icon="recipe" />
-          <Icon icon="vena" />
-          <Icon icon="passporthealth" />
-        </div>
-      </div>
     </div>
   );
 }
