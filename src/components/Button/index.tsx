@@ -4,6 +4,8 @@ import { ReactNode } from "react";
 import { ButtonVariant, ButtonType } from "../../types/components";
 import classNames from "classnames";
 import styles from "./button.module.css";
+import { Icon } from "../Icon";
+import { IconNames } from "@/types/icon";
 
 interface ButtonProps {
   label?: string;
@@ -13,6 +15,7 @@ interface ButtonProps {
   handleClick?: () => void;
   children?: ReactNode | string;
   classStyles?: any;
+  icon?: IconNames
 }
 
 export const Button = ({
@@ -22,6 +25,7 @@ export const Button = ({
   handleClick,
   children,
   classStyles,
+  icon
 }: ButtonProps) => {
   const buttonClasses = classNames(styles.button, {
     [styles.button_primary]: variant === "primary",
@@ -40,6 +44,7 @@ export const Button = ({
       style={classStyles}
     >
       {label || children}
+      {icon && <Icon icon={icon} />}
     </button>
   );
 };

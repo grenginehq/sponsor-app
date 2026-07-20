@@ -25,6 +25,12 @@
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .second_step_image {
+    display: none;
+  }
+}
+
 .second_step {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -33,6 +39,14 @@
   align-items: center;
   gap: 100px;
 }
+
+@media only screen and (max-width: 480px) {
+  .second_step {
+    grid-template-columns: 1fr;
+    padding: 0px 16px 0px 16px;
+  }
+}
+
 
 .second_step_form {
   display: flex;

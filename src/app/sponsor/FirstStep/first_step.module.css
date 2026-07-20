@@ -25,6 +25,12 @@
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .first_step_image {
+    display: none;
+  }
+}
+
 .first_step {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -32,6 +38,13 @@
   height: calc(100vh - 70px);
   align-items: center;
   gap: 100px;
+}
+
+@media only screen and (max-width: 480px) {
+  .first_step {
+    grid-template-columns: 1fr;
+    padding: 0px 16px 0px 16px;
+  }
 }
 
 .first_step_form {

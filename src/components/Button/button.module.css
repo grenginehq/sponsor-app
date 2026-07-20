@@ -12,6 +12,7 @@
   cursor: pointer;
   min-width: 223px;
   height: 58px;
+  gap: 8px;
 }
 
 .button_primary {

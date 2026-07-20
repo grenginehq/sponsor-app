@@ -43,6 +43,7 @@ export const FirstStep = ({ control, handleScreenChange }: FirstStepProps) => {
             type="button"
             variant="primary"
             label="Next"
+            icon="arrowLeft"
           />
         </div>
       </form>

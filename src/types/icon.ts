@@ -24,4 +24,5 @@ export type IconNames =
   | "logo2"
   | "logo3"
   | "footerlogo"
-  | "navBar";
+  | "navBar"
+  | "arrowLeft";

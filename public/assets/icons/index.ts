@@ -330,4 +330,8 @@ export const icons: Record<IconNames, string> = {
 <path d="M7.5 13H17M1 7H17M1 1H17" stroke="black" stroke-width="2" stroke-linecap="round"/>
 </svg>
   `,
+  arrowLeft: `<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.3333 15L17 8L10.3333 1M17 8L1 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`
 };
