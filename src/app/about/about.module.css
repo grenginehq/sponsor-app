@@ -2,6 +2,14 @@
   position: relative;
   height: 536px;
 }
+.about_image_container {
+  position: relative;
+  height: 617px;
+}
+.vision_image_container {
+  position: relative;
+  height: 100%;
+}
 .text_container {
   padding: 64px 48px;
 }
@@ -28,17 +36,26 @@
   grid-template-columns: 1fr 1fr;
   padding: 96px 48px 64px 48px;
 }
-.mission_container_heading {
+.container_heading {
   font-size: 32px;
   font-weight: 700;
   font-style: bold;
 }
 .mission_container_text {
   font-size: 32px;
-  font-style: light;
+  letter-spacing: 0%;
+  line-height: 100%;
   font-weight: 300;
   color: var(--black);
   font-family: var(--font-inter);
-  letter-spacing: 0%;
-  line-height: 100%;
+}
+.vision_container {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 48px;
+}
+.vision_bottom_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 48px 0px;
 }

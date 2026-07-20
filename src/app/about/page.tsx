@@ -29,7 +29,7 @@ export default function About() {
           practical needs, inspiring hope, and transforming lives.
         </p>
       </div>
-      <div className={styles.image_container}>
+      <div className={styles.about_image_container}>
         <Image
           src="/assets/images/woman.png"
           fill
@@ -38,13 +38,32 @@ export default function About() {
         />
       </div>
       <div className={styles.mission_container}>
-        <h1 className={styles.mission_container_heading}>OUR MISSION</h1>
+        <h1 className={styles.container_heading}>OUR MISSION</h1>
         <p className={styles.mission_container_text}>
           To demonstrate God's love through faith in action by meeting practical
           needs, empowering individuals and families, fostering compassionate
           communities, and creating opportunities that bring lasting hope and
           transformation.
         </p>
+      </div>
+      <div className={styles.vision_container}>
+        <h1 className={styles.container_heading}>OUR VISION</h1>
+        <div className={styles.vision_bottom_container}>
+          <p className={styles.mission_container_text}>
+            To demonstrate God's love through faith in action by meeting
+            practical needs, empowering individuals and families, fostering
+            compassionate communities, and creating opportunities that bring
+            lasting hope and transformation.
+          </p>
+          <div className={styles.vision_image_container}>
+            <Image
+              src="/assets/images/vision.png"
+              fill
+              alt="vision_image"
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+        </div>
       </div>
       <Footer />
     </div>
