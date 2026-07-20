@@ -20,20 +20,22 @@
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
-  text-align: center;
+  letter-spacing: 0%;
 }
-.grid_inner_container {
+.grid_inner_container,
+.grid_inner_right_container,
+.grid_inner_right_top_container {
   padding: 48px;
   border-radius: 150px;
-  background: #cdcdcd66;
+  background: var(--secondary13);
+}
+.grid_inner_right_top_container {
+  text-align: center;
 }
 .grid_inner_right_container {
   height: 100%;
-  padding: 48px;
-  border-radius: 150px;
   display: flex;
   align-items: center;
-  background: #cdcdcd66;
 }
 .about_image_container {
   position: relative;

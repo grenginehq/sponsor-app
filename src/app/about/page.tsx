@@ -57,7 +57,7 @@ export default function About() {
           />
         </div>
         <div className={styles.grid_flex_container}>
-          <div className={styles.grid_inner_container}>
+          <div className={styles.grid_inner_right_top_container}>
             <p className={styles.grid_text}>
               Our work focuses on restoring dignity, building resilience,
               strengthening communities, and giving hope to those facing life's
