@@ -30,6 +30,48 @@ export default function About() {
           practical needs, inspiring hope, and transforming lives.
         </p>
       </div>
+      <div className={styles.grid_container}>
+        <div className={styles.grid_flex_container}>
+          <div className={styles.grid_inner_container}>
+            <p className={styles.grid_text}>
+              Bethesda exists to serve people in practical, meaningful, and
+              life-changing ways.
+            </p>
+          </div>
+          <div className={styles.grid_inner_container}>
+            <p className={styles.grid_text}>
+              Through our programmes, community initiatives, and partnerships,
+              we provide support that addresses immediate needs while creating
+              opportunities for long-term growth and independence. We believe
+              real transformation happens when compassion is combined with
+              action.
+            </p>
+          </div>
+        </div>
+        <div className={styles.grid_image_container}>
+          <Image
+            src="/assets/images/child.png"
+            fill
+            alt="about_image"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+        <div className={styles.grid_flex_container}>
+          <div className={styles.grid_inner_container}>
+            <p className={styles.grid_text}>
+              Our work focuses on restoring dignity, building resilience,
+              strengthening communities, and giving hope to those facing life's
+              challenges.
+            </p>
+          </div>
+          <div className={styles.grid_inner_right_container}>
+            <p className={styles.grid_text}>
+              Every project we undertake is driven by one purpose to make a
+              lasting impact in the lives of the people we serve.
+            </p>
+          </div>
+        </div>
+      </div>
       <div className={styles.about_image_container}>
         <Image
           src="/assets/images/woman.png"

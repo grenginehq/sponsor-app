@@ -2,6 +2,39 @@
   position: relative;
   height: 536px;
 }
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 48px 48px 128px 48px;
+}
+.grid_flex_container {
+  display: flex;
+  flex-direction: column;
+}
+.grid_image_container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 200px;
+}
+.grid_text {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+}
+.grid_inner_container {
+  padding: 48px;
+  border-radius: 150px;
+  background: #cdcdcd66;
+}
+.grid_inner_right_container {
+  height: 100%;
+  padding: 48px;
+  border-radius: 150px;
+  display: flex;
+  align-items: center;
+  background: #cdcdcd66;
+}
 .about_image_container {
   position: relative;
   height: 617px;
