@@ -6,6 +6,11 @@
   align-items: center;
   padding: 15px 153px;
 }
+@media only screen and (min-width: 1441px) {
+  .main_container {
+    padding: 15px 0px;
+  }
+}
 @media only screen and (max-width: 480px) {
   .main_container {
     padding: 32px 0px;
@@ -19,7 +24,13 @@
   gap: 16px;
   flex-wrap: wrap;
 }
-
+@media only screen and (min-width: 1441px) {
+  .inner_container {
+    max-width: 1440px;
+    width: 1440px;
+    margin: auto;
+  }
+}
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
   .inner_container {
     justify-content: center;

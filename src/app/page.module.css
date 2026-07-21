@@ -8,6 +8,13 @@
   gap: 16px;
   padding: 128px 48px 128px 48px;
 }
+@media only screen and (min-width: 1441px) {
+  .about_section {
+    max-width: 1440px;
+    width: 1440px;
+    margin: auto;
+  }
+}
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
   .about_section {
     display: flex;
@@ -176,6 +183,13 @@
   gap: 48px;
   align-items: center;
 }
+@media only screen and (min-width: 1441px) {
+  .project_container {
+    max-width: 1440px;
+    width: 1440px;
+    margin: auto;
+  }
+}
 .project_top_container {
   display: flex;
   width: 100%;
@@ -275,6 +289,13 @@
 
 .card_section {
   padding: 0px 48px 128px 48px;
+}
+@media only screen and (min-width: 1441px) {
+  .card_section {
+    max-width: 1440px;
+    width: 1440px;
+    margin: auto;
+  }
 }
 @media only screen and (max-width: 480px) {
   .card_section {

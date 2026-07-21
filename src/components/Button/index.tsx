@@ -15,7 +15,7 @@ interface ButtonProps {
   handleClick?: () => void;
   children?: ReactNode | string;
   classStyles?: any;
-  icon?: IconNames
+  icon?: IconNames;
 }
 
 export const Button = ({
@@ -25,7 +25,7 @@ export const Button = ({
   handleClick,
   children,
   classStyles,
-  icon
+  icon,
 }: ButtonProps) => {
   const buttonClasses = classNames(styles.button, {
     [styles.button_primary]: variant === "primary",

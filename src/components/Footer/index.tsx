@@ -23,6 +23,8 @@ export default function Footer() {
           <Logo />
         </div>
         <div className={styles.contact_us_container}>
+        <div className={styles.contact_us_inner}>
+
           <div className={styles.contact_us_form_container}>
             <h1 className={styles.contact_us_text_container_heading}>
               Contact us
@@ -68,8 +70,10 @@ export default function Footer() {
             />
           </div>
         </div>
+        </div>
       </section>
       <footer className={styles.footer}>
+        <div className={styles.footer_inner}>
         <Icon className={styles.footer_logo} icon="footerlogo" />
         <div className={styles.footer_right_container}>
           <div className={styles.footer_logos_container}>
@@ -106,6 +110,7 @@ export default function Footer() {
               Contact Us
             </Link>
           </motion.div>
+        </div>
         </div>
       </footer>
     </div>
