@@ -98,7 +98,7 @@ export default function About() {
               <h1 className={styles.vision_heading}>TRANSFORMING LIVES</h1>
               <Icon icon="yellowIcon" />
             </div>
-            <p>To see lives transformed</p>
+            <p className={styles.vision_description}>To see lives transformed</p>
             <div className={styles.vision_top_flex_container}>
               <h1 className={styles.vision_text}>RESTORING HOPE</h1>
               <Icon icon="grayIcon" />

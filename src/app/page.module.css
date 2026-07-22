@@ -60,17 +60,16 @@
 }
 .about_text {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 28px;
   letter-spacing: 0%;
   text-align: justify;
 }
 .about_text_bold {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 28px;
   letter-spacing: 0%;
-  font-weight: 500;
 }
 @media only screen and (max-width: 480px) {
   .about_text_bold {

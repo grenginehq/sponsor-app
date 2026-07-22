@@ -21,17 +21,17 @@
   gap: 16px;
 }
 .text_container_heading {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 400;
   letter-spacing: 0%;
   color: var(--black);
-  font-style: medium;
+  font-style: regular;
   line-height: 100%;
 }
 .text_container_title {
-  font-size: 24px;
+  font-size: 20px;
   font-style: regular;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--black);
   letter-spacing: 0%;
   line-height: 100%;
