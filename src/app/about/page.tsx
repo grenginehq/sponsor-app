@@ -109,6 +109,9 @@ export default function About() {
                 style={{ objectFit: "cover", overflow: "hidden" }}
               />
             </div>
+            <p className={styles.vision_description}>
+              To see lives transformed
+            </p>
             <div className={styles.vision_top_flex_container}>
               <h1 className={styles.vision_text}>RESTORING HOPE</h1>
               <div className={styles.icon_contianer}>

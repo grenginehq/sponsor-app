@@ -111,7 +111,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div>
+      <>
         <Logos />
         <section className={styles.project_container}>
           <div className={styles.project_top_container}>
@@ -157,7 +157,7 @@ export default function Home() {
             ))}
           </motion.div>
         </section>
-      </div>
+      </>
       <section className={styles.card_section}>
         <motion.div
           initial="hidden"
