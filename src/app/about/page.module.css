@@ -49,7 +49,7 @@
   letter-spacing: 0%;
   text-align: center;
 }
-.grid_inner_container{
+.grid_inner_container {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -113,7 +113,7 @@
 }
 @media only screen and (max-width: 480px) {
   .about_text_bold {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     font-style: regular;
   }
@@ -129,7 +129,7 @@
 }
 @media only screen and (max-width: 480px) {
   .about_text {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     font-style: regular;
   }
@@ -160,7 +160,7 @@
 }
 @media only screen and (max-width: 480px) {
   .mission_container_text {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 .vision_container {
@@ -255,7 +255,7 @@
   letter-spacing: 2.1px;
   color: #b4b4b4;
 }
-.vision_description{
+.vision_description {
   font-size: 20px;
   font-style: regular;
   font-weight: 400;
@@ -265,6 +265,6 @@
 }
 @media only screen and (max-width: 480px) {
   .vision_text {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
