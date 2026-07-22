@@ -96,18 +96,32 @@ export default function About() {
           <div className={styles.vision_flex_container}>
             <div className={styles.vision_top_flex_container}>
               <h1 className={styles.vision_heading}>TRANSFORMING LIVES</h1>
-              <Icon icon="yellowIcon" />
+              <div className={styles.icon_contianer}>
+                <Icon icon="yellowIcon" />
+              </div>
             </div>
             <p>To see lives transformed</p>
+            <div className={styles.vision_mobile_image_container}>
+              <Image
+                src="/assets/images/vision.png"
+                fill
+                alt="about_image"
+                style={{ objectFit: "cover", overflow: "hidden" }}
+              />
+            </div>
             <div className={styles.vision_top_flex_container}>
               <h1 className={styles.vision_text}>RESTORING HOPE</h1>
-              <Icon icon="grayIcon" />
+              <div className={styles.icon_contianer}>
+                <Icon icon="grayIcon" />
+              </div>
             </div>
             <div className={styles.vision_building_flex_container}>
               <h1 className={styles.vision_text}>
                 BUILDING STRONGER COMMUNITIES.
               </h1>
-              <Icon icon="grayIcon" />
+              <div className={styles.icon_contianer}>
+                <Icon icon="grayIcon" />
+              </div>
             </div>
           </div>
           <div className={styles.vision_image_container}>

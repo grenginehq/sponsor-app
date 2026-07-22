@@ -93,10 +93,10 @@ export default function Footer() {
             <Link className={styles.footer_links} href={"/"}>
               Home
             </Link>
-            <Link className={styles.footer_links} href={""}>
+            <Link className={styles.footer_links} href={"/about"}>
               About
             </Link>
-            <Link className={styles.footer_links} href={""}>
+            <Link className={styles.footer_links} href={"/foodBank"}>
               Community
             </Link>
             <Link className={styles.footer_links} href={""}>
