@@ -7,11 +7,14 @@ import { useRouter } from "next/navigation";
 
 export const Header = () => {
   const router = useRouter();
+  const handleGoHome = () => {
+    router.push("/")
+  }
   return (
     <header className={styles.header}>
-      <div className={styles.header_navigation}>
-        <Icon icon="logo2" />
-      </div>
+      <button type="button" onClick={handleGoHome} className={styles.header_navigation}>
+        <Icon icon="logo4" />
+      </button>
       <nav className={styles.nav}>
         {/* <Icon icon="search" /> */}
         <Link className={styles.nav_link} href="/about">

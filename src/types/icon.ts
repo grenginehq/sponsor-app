@@ -27,4 +27,5 @@ export type IconNames =
   | "navBar"
   | "arrowLeft"
   | "yellowIcon"
-  | "grayIcon";
+  | "grayIcon"
+  | "logo4";

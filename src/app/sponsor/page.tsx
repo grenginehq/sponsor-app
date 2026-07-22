@@ -31,7 +31,7 @@ export default function Sponsor() {
   return (
     <div className={styles.sponsor}>
       <header className={styles.sponsor_header}>
-        <Icon icon="logo2" />
+        <Icon icon="logo4" />
       </header>
       {screens[activeScreen]}
     </div>

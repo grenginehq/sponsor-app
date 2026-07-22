@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { Icon } from "../Icon";
 import { Input } from "@/components/Input";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const smoothTransition = {
   type: "tween",
@@ -16,12 +17,16 @@ const smoothTransition = {
 
 export default function Footer() {
   const { control } = useForm();
+  const router = useRouter();
+  const handleGoHome = () => {
+    router.push("/")
+  }
   return (
     <div>
       <section className={styles.contact_us}>
-        <div className={styles.mobile_logos_container}>
+        <button type="button" onClick={handleGoHome} className={styles.mobile_logos_container}>
           <Logo />
-        </div>
+        </button>
         <div className={styles.contact_us_container}>
         <div className={styles.contact_us_inner}>
 
@@ -74,7 +79,7 @@ export default function Footer() {
       </section>
       <footer className={styles.footer}>
         <div className={styles.footer_inner}>
-        <Icon className={styles.footer_logo} icon="footerlogo" />
+        <Icon className={styles.footer_logo} icon="logo4" />
         <div className={styles.footer_right_container}>
           <div className={styles.footer_logos_container}>
             <div className={styles.footer_logo_container}>
