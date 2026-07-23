@@ -1,39 +1,25 @@
 "use client";
 import { Icon } from "@/components/Icon";
+import { projectCategories } from "@/constants";
 import styles from "./page.module.css";
-import { FirstStep } from "./FirstStep";
-import { useForm } from "react-hook-form";
-import { JSX, useState } from "react";
-import { SecondStep } from "./SecondStep";
 
 export default function Sponsor() {
-  const { control, handleSubmit } = useForm();
-  const [activeScreen, setActiveScreen] = useState<"firstStep" | "secondStep">(
-    "firstStep",
-  );
-
-  const handleScreenChange = (screen: "firstStep" | "secondStep") => {
-    setActiveScreen(screen);
-  };
-  const screens: Record<"firstStep" | "secondStep", JSX.Element> = {
-    firstStep: (
-      <FirstStep control={control} handleScreenChange={handleScreenChange} />
-    ),
-    secondStep: (
-      <SecondStep
-        handleSubmit={handleSubmit}
-        control={control}
-        handleScreenChange={handleScreenChange}
-      />
-    ),
-  };
-
+  
   return (
     <div className={styles.sponsor}>
       <header className={styles.sponsor_header}>
         <Icon icon="logo4" />
       </header>
-      {screens[activeScreen]}
+      <div className={styles.sponsor_filters_container}>
+
+      <div className={styles.sponsor_filters}>
+        {projectCategories.map((category) => {
+          return (
+            <div className={styles.sponsor_filter}></div>
+          )
+        })}
+        </div>
+      </div>
     </div>
   );
 }

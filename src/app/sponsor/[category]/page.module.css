@@ -1,0 +1,23 @@
+.sponsor_category_header {
+  padding: 10px 48px;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+@media only screen and (max-width: 480px) {
+  .sponsor_category_header {
+    padding: 10px 16px;
+  }
+}
+
+.sponsor_category_header svg {
+  width: 138px;
+  height: 106.26px;
+}
+
+.sponsor_category {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: hidden;
+}

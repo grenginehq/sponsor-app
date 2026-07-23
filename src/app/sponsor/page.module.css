@@ -1,23 +1,24 @@
 .sponsor_header {
-  padding: 10px 48px;
-  display: flex;
-  align-items: center;
-  height: auto;
-}
-@media only screen and (max-width: 480px) {
-  .sponsor_header {
-    padding: 10px 16px;
+    padding: 10px 48px;
+    display: flex;
+    align-items: center;
+    height: auto;
   }
-}
-
-.sponsor_header svg {
-  width: 138px;
-  height: 106.26px;
-}
-
-.sponsor {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow-y: hidden;
-}
+  @media only screen and (max-width: 480px) {
+    .sponsor_header {
+      padding: 10px 16px;
+    }
+  }
+  
+  .sponsor_header svg {
+    width: 138px;
+    height: 106.26px;
+  }
+  
+  .sponsor {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  
