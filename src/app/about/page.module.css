@@ -105,18 +105,11 @@
 }
 .about_text_bold {
   font-size: 20px;
-  font-style: regular;
+  font-style: Regular;
   font-weight: 400;
   color: var(--black);
   letter-spacing: 0%;
   line-height: 100%;
-}
-@media only screen and (max-width: 480px) {
-  .about_text_bold {
-    font-size: 20px;
-    font-weight: 400;
-    font-style: regular;
-  }
 }
 
 .about_text {
@@ -127,13 +120,7 @@
   letter-spacing: 0%;
   line-height: 100%;
 }
-@media only screen and (max-width: 480px) {
-  .about_text {
-    font-size: 20px;
-    font-weight: 300;
-    font-style: regular;
-  }
-}
+
 .mission_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
