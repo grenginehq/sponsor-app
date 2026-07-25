@@ -17,6 +17,7 @@
   --gray: #b4b4b4;
   --black: #000;
   --black02: rgba(0, 0, 0, 0.4);
+  --black03: rgba(0, 0, 0, 0.5);
   --gradient: linear-gradient(#ffffff, #dadafe);
   font-size: 1rem;
   box-sizing: border-box;

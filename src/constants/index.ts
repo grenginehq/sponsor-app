@@ -1,5 +1,6 @@
 import { Icon } from "@/components/Icon";
 import { icons } from "../../public/assets/icons";
+import { Event } from "@/types/event";
 export const images = [
   {
     src: "/assets/images/old_woman.png",
@@ -109,3 +110,14 @@ export const projectCategories = [
 ];
 
 export const inputLists = ["Name", "Email Address", "Message"];
+
+export const events: Event[] = [
+  {
+    category: "Medical",
+    image: "/assets/images/foodbank.jpg",
+    title: "Bethseda Community Food Bank",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    date: "Mondays (except Bank Holidays)",
+  },
+];

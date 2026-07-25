@@ -1,0 +1,65 @@
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding-right: 27px;
+  width: 100%;
+  height: 100%;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -27px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  border: 2px solid var(--secondary13);
+  box-sizing: border-box;
+}
+
+.checkbox label::after {
+  content: "";
+  position: absolute;
+  right: -21px;
+  top: 50%;
+  width: 4px;
+  height: 8px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: translateY(-65%) rotate(45deg);
+  opacity: 0;
+}
+
+/* Checked States */
+.checkbox:has(input:checked) label::after {
+  opacity: 1;
+}
+
+.checkbox:has(input:checked) label::before {
+  background-color: var(--primary);
+  border-color: transparent;
+}

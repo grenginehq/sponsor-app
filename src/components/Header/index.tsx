@@ -8,11 +8,15 @@ import { useRouter } from "next/navigation";
 export const Header = () => {
   const router = useRouter();
   const handleGoHome = () => {
-    router.push("/")
-  }
+    router.push("/");
+  };
   return (
     <header className={styles.header}>
-      <button type="button" onClick={handleGoHome} className={styles.header_navigation}>
+      <button
+        type="button"
+        onClick={handleGoHome}
+        className={styles.header_navigation}
+      >
         <Icon icon="logo4" />
       </button>
       <nav className={styles.nav}>

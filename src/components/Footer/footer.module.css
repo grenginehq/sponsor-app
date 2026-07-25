@@ -13,7 +13,7 @@
   }
 }
 
-.contact_us_inner{
+.contact_us_inner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
@@ -135,7 +135,7 @@
     padding: 64px 48px 128px 48px;
   }
 }
-.footer_inner{
+.footer_inner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
