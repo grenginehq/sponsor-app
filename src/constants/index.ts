@@ -119,5 +119,63 @@ export const events: Event[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     date: "Mondays (except Bank Holidays)",
+    totalAmount: 10000,
+    totalReceived: 7500,
+    currency: "GBP",
+  },
+  {
+    category: "Medical",
+    image: "/assets/images/foodbank.jpg",
+    title: "Bethseda Community Food Bank",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    date: "Mondays (except Bank Holidays)",
+    totalAmount: 10000,
+    totalReceived: 7500,
+    currency: "GBP",
+  },
+  {
+    category: "Medical",
+    image: "/assets/images/foodbank.jpg",
+    title: "Bethseda Community Food Bank",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    date: "Mondays (except Bank Holidays)",
+    totalAmount: 10000,
+    totalReceived: 7500,
+    currency: "GBP",
+  },
+  {
+    category: "Medical",
+    image: "/assets/images/foodbank.jpg",
+    title: "Bethseda Community Food Bank",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    date: "Mondays (except Bank Holidays)",
+    totalAmount: 10000,
+    totalReceived: 7500,
+    currency: "GBP",
+  },
+  {
+    category: "Medical",
+    image: "/assets/images/foodbank.jpg",
+    title: "Bethseda Community Food Bank",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    date: "Mondays (except Bank Holidays)",
+    totalAmount: 10000,
+    totalReceived: 7500,
+    currency: "GBP",
+  },
+  {
+    category: "Medical",
+    image: "/assets/images/foodbank.jpg",
+    title: "Bethseda Community Food Bank",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    date: "Mondays (except Bank Holidays)",
+    totalAmount: 10000,
+    totalReceived: 7500,
+    currency: "GBP",
   },
 ];

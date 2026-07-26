@@ -4,4 +4,7 @@ export type Event = {
   image: string;
   category: string;
   date: string;
+  totalAmount: number;
+  totalReceived: number;
+  currency: string;
 };

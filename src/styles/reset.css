@@ -14,6 +14,9 @@
   --secondary11: rgba(246, 211, 102, 0.5);
   --secondary12: rgba(234, 234, 234, 0.7);
   --secondary13: #cdcdcd66;
+  --secondary14: #e0e0e0;
+  --secondary15: #262626;
+  --secondary16: #E2E2E2;
   --gray: #b4b4b4;
   --black: #000;
   --black02: rgba(0, 0, 0, 0.4);
@@ -217,12 +220,11 @@ textarea {
   --webkit-appearance: textfield;
   appearance: textfield;
   outline-offset: -2px;
-
-  &::-webkit-search-cancel-button {
-    --webkit-appearance: none;
-  }
 }
 
+[type="search"]::-webkit-search-cancel-button {
+  --webkit-appearance: none;
+}
 [type="search"]::-webkit-search-decoration {
   --webkit-appearance: none;
 }

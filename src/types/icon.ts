@@ -28,4 +28,6 @@ export type IconNames =
   | "arrowLeft"
   | "yellowIcon"
   | "grayIcon"
-  | "logo4";
+  | "logo4"
+  | "chevronDown"
+  | "chevronUp";

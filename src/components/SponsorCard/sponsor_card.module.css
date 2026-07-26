@@ -1,5 +1,9 @@
 .sponsor_card {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
 }
 .sponsor_card_image {
   width: 100%;
@@ -30,8 +34,8 @@
   font-weight: 400;
   line-height: normal;
 }
-.sponsor_card_title_container{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+.sponsor_card_title_container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }

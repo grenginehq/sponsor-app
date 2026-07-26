@@ -1,5 +1,5 @@
 "use client";
-import { Control, useController } from "react-hook-form";
+import { Control, FieldValues, useController } from "react-hook-form";
 import styles from "./action_pill.module.css";
 import { useState } from "react";
 import classNames from "classnames";
@@ -7,12 +7,17 @@ import { Icon } from "../Icon";
 
 interface ActionPillProps {
   label: string;
-  control: Control<any>;
+  control?: Control<any>;
   name: string;
   value: string;
 }
 
-export const ActionPill = ({ label, name, control }: ActionPillProps) => {
+export const ActionPill = ({
+  label,
+  name,
+  control,
+  value,
+}: ActionPillProps) => {
   const { field } = useController({ name, control });
   const [toggleActionPill, setToggleActionPill] = useState(false);
 
@@ -21,7 +26,8 @@ export const ActionPill = ({ label, name, control }: ActionPillProps) => {
   };
 
   const actionPillClasses = classNames(styles.action_pill, {
-    [styles.action_pill_active]: toggleActionPill === true,
+    [styles.action_pill_active]:
+      toggleActionPill === true || field.value === value,
   });
 
   return (

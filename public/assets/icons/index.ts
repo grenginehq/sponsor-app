@@ -356,4 +356,12 @@ export const icons: Record<IconNames, string> = {
 </defs>
 </svg>
 `,
+  chevronDown: `<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6.00081 5.58L11 1" stroke="#0A090B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`,
+  chevronUp: `<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 5.58344L6.00081 1L11 5.58344" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+`,
 };
