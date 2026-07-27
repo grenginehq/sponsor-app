@@ -44,17 +44,17 @@ export default function Sponsor() {
         <Icon icon="logo4" />
       </header>
       <div className={styles.sponsor_dashboard}>
-        <div className={styles.sponsor_dashboard_main_image}>
+         <div className={styles.sponsor_dashboard_main_image}>
           <Image alt="background" fill src="/assets/images/background.jpg" />
           <div className={styles.sponsor_dashboard_main_title_container}>
             <h1 className={styles.sponsor_dashboard_main_title}>
               Good morning
             </h1>
-            <p className={styles.sponsor_dashboard_main_description}>
+             <p className={styles.sponsor_dashboard_main_description}>
               Hello dear. Welcome to Bethseda Sponsor App!
-            </p>
+            </p> 
           </div>
-        </div>
+        </div> 
         <div className={styles.sponsor_dashboard_main_container}>
           <div className={styles.sponsor_filters_container}>
             <p className={styles.sponsor_filters_heading}>Filter Projects</p>
