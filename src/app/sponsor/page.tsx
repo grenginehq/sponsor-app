@@ -47,7 +47,13 @@ export default function Sponsor() {
       </header>
       <div className={styles.sponsor_dashboard}>
         <div className={styles.sponsor_dashboard_main_image}>
-          <Image alt="background" fill src="/assets/images/background.jpg" />
+          <Image
+            sizes="100vw"
+            priority
+            alt="background"
+            fill
+            src="/assets/images/background.jpg"
+          />
           <div className={styles.sponsor_dashboard_main_title_container}>
             <h1 className={styles.sponsor_dashboard_main_title}>
               Good morning
