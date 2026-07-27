@@ -1,15 +1,17 @@
 "use client";
-import { Control, FieldValues, useController } from "react-hook-form";
-import styles from "./action_pill.module.css";
-import { useState } from "react";
+
 import classNames from "classnames";
+import { Control, useController } from "react-hook-form";
+
 import { Icon } from "../Icon";
+import styles from "./action_pill.module.css";
 
 interface ActionPillProps {
   label: string;
-  control?: Control<any>;
+  control: Control<any>;
   name: string;
   value: string;
+  isFeatured?: boolean;
 }
 
 export const ActionPill = ({
@@ -17,23 +19,41 @@ export const ActionPill = ({
   name,
   control,
   value,
+  isFeatured,
 }: ActionPillProps) => {
-  const { field } = useController({ name, control });
-  const [toggleActionPill, setToggleActionPill] = useState(false);
-
-  const handleToggle = () => {
-    setToggleActionPill(!toggleActionPill);
-  };
-
-  const actionPillClasses = classNames(styles.action_pill, {
-    [styles.action_pill_active]:
-      toggleActionPill === true || field.value === value,
+  const { field } = useController({
+    name,
+    control,
   });
 
+  const active = isFeatured
+    ? field.value === value
+    : (field.value ?? []).includes(value);
+
+  const handleClick = () => {
+    if (isFeatured) {
+      field.onChange(value);
+    } else {
+      const current: string[] = field.value ?? [];
+
+      if (current.includes(value)) {
+        field.onChange(current.filter((v) => v !== value));
+      } else {
+        field.onChange([...current, value]);
+      }
+    }
+  };
+
   return (
-    <button type="button" className={actionPillClasses} onClick={handleToggle}>
+    <button
+      type="button"
+      className={classNames(styles.action_pill, {
+        [styles.action_pill_active]: active,
+      })}
+      onClick={handleClick}
+    >
       {label}
-      {toggleActionPill && <Icon icon="tick" />}
+      {active && !isFeatured && <Icon icon="tick" />}
     </button>
   );
 };

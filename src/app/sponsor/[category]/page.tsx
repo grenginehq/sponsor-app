@@ -5,9 +5,16 @@ import { FirstStep } from "./FirstStep";
 import { useForm } from "react-hook-form";
 import { JSX, useState } from "react";
 import { SecondStep } from "./SecondStep";
+import { useParams } from "next/navigation";
 
 export default function SponsorCategory() {
-  const { control, handleSubmit } = useForm();
+  const {category} = useParams();
+  const { control, handleSubmit } = useForm<any>({
+    defaultValues: {
+      categories: [category?.toUpperCase()],
+    }
+  });
+
   const [activeScreen, setActiveScreen] = useState<"firstStep" | "secondStep">(
     "firstStep",
   );

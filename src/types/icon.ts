@@ -30,4 +30,5 @@ export type IconNames =
   | "grayIcon"
   | "logo4"
   | "chevronDown"
-  | "chevronUp";
+  | "chevronUp"
+  | "searchBold";

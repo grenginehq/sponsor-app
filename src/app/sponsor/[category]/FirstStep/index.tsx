@@ -29,7 +29,7 @@ export const FirstStep = ({ control, handleScreenChange }: FirstStepProps) => {
             return (
               <ActionPill
                 key={`action_${index + 1}`}
-                name="category"
+                name="categories"
                 control={control}
                 label={category?.label}
                 value={category?.value}

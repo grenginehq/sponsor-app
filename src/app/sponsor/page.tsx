@@ -20,11 +20,13 @@ export default function Sponsor() {
       categories: [] as string[],
     },
   });
-  const { control: featureControl } = useForm({
+  const { control: featureControl } = useForm();
+  const { control: searchControl } = useForm<any>({
     defaultValues: {
-      category: "MEDICAL",
-    },
+      search: ""
+    }
   });
+
   const selectedCategories = useWatch({
     control,
     name: "categories",
@@ -44,17 +46,17 @@ export default function Sponsor() {
         <Icon icon="logo4" />
       </header>
       <div className={styles.sponsor_dashboard}>
-         <div className={styles.sponsor_dashboard_main_image}>
+        <div className={styles.sponsor_dashboard_main_image}>
           <Image alt="background" fill src="/assets/images/background.jpg" />
           <div className={styles.sponsor_dashboard_main_title_container}>
             <h1 className={styles.sponsor_dashboard_main_title}>
               Good morning
             </h1>
-             <p className={styles.sponsor_dashboard_main_description}>
+            <p className={styles.sponsor_dashboard_main_description}>
               Hello dear. Welcome to Bethseda Sponsor App!
-            </p> 
+            </p>
           </div>
-        </div> 
+        </div>
         <div className={styles.sponsor_dashboard_main_container}>
           <div className={styles.sponsor_filters_container}>
             <p className={styles.sponsor_filters_heading}>Filter Projects</p>
@@ -93,7 +95,7 @@ export default function Sponsor() {
                         fontSize: "18px",
                         fontWeight: 500,
                         lineHeight: "28px",
-                        textAlign: "left"
+                        textAlign: "left",
                       }}
                     />
                   </div>
@@ -131,7 +133,7 @@ export default function Sponsor() {
                   community at large.{" "}
                 </p>
               </div>
-              <Search />
+              <Search placeholder="Search By Project Name" name="search" control={searchControl} />
               <div className={styles.sponsor_dashboard_main_feature_container}>
                 <p className={styles.sponsor_dashboard_main_feature}>
                   Featured:
@@ -139,11 +141,12 @@ export default function Sponsor() {
                 {projectCategories?.slice(0, 3)?.map((category, index) => {
                   return (
                     <ActionPill
-                      name={"category"}
+                      name={"categories"}
                       label={category?.label}
                       value={category?.value}
                       key={`featured_${index + 1}`}
                       control={featureControl}
+                      isFeatured={true}
                     />
                   );
                 })}

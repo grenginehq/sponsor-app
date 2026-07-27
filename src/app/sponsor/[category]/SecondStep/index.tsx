@@ -1,6 +1,5 @@
 import { projectCategories } from "@/constants";
 import styles from "./second_step.module.css";
-import { ActionPill } from "@/components/ActionPill";
 import { Control, FieldValues, UseFormHandleSubmit } from "react-hook-form";
 import Image from "next/image";
 import { Input } from "@/components/Input";
