@@ -52,6 +52,7 @@ export default function Sponsor() {
             priority
             alt="background"
             fill
+            unoptimized
             src="/assets/images/background.jpg"
           />
           <div className={styles.sponsor_dashboard_main_title_container}>

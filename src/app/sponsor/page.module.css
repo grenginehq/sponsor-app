@@ -43,6 +43,7 @@
   position: relative;
   height: 314px;
   border-radius: 8px;
+  width: 100%;
 }
 @media only screen and (max-width: 480px) {
   .sponsor_dashboard_main_image {
