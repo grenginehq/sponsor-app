@@ -9,18 +9,18 @@
   border: 1px solid var(--secondary16);
   background: var(--secondary12);
 }
-.search_input{
+.search_input {
   color: var(--black);
-font-size: 16px;
-font-style: normal;
-line-height: normal;
-width: 100%;
-height: 100%;
-background-color: transparent;
-border: none;
-outline: 0px;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: 0px;
 }
-.search_input::placeholder{
+.search_input::placeholder {
   font-weight: 500;
   color: var(--gray);
 }
@@ -29,7 +29,7 @@ outline: 0px;
   appearance: none;
   display: none;
 }
-.search_input_button{
+.search_input_button {
   height: 100%;
   width: auto;
 }

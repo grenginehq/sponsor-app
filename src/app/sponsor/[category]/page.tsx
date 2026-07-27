@@ -3,17 +3,29 @@ import { Icon } from "@/components/Icon";
 import styles from "./page.module.css";
 import { FirstStep } from "./FirstStep";
 import { useForm } from "react-hook-form";
-import { JSX, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 import { SecondStep } from "./SecondStep";
 import { useParams } from "next/navigation";
 
 export default function SponsorCategory() {
-  const {category} = useParams();
-  const { control, handleSubmit } = useForm<any>({
+  const params = useParams();
+  const { control, handleSubmit, reset } = useForm<any>({
     defaultValues: {
-      categories: [category?.toUpperCase()],
-    }
+      categories: [],
+    },
   });
+
+  const category = Array.isArray(params.category)
+    ? params.category[0]
+    : params.category;
+
+  useEffect(() => {
+    if (category) {
+      reset({
+        categories: [category.toUpperCase()],
+      });
+    }
+  }, [category, reset]);
 
   const [activeScreen, setActiveScreen] = useState<"firstStep" | "secondStep">(
     "firstStep",

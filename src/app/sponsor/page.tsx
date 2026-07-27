@@ -23,8 +23,8 @@ export default function Sponsor() {
   const { control: featureControl } = useForm();
   const { control: searchControl } = useForm<any>({
     defaultValues: {
-      search: ""
-    }
+      search: "",
+    },
   });
 
   const selectedCategories = useWatch({
@@ -133,7 +133,11 @@ export default function Sponsor() {
                   community at large.{" "}
                 </p>
               </div>
-              <Search placeholder="Search By Project Name" name="search" control={searchControl} />
+              <Search
+                placeholder="Search By Project Name"
+                name="search"
+                control={searchControl}
+              />
               <div className={styles.sponsor_dashboard_main_feature_container}>
                 <p className={styles.sponsor_dashboard_main_feature}>
                   Featured:
