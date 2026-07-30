@@ -21,11 +21,11 @@ export const Hero = () => {
             We Can Transform Lives
           </h2>
           <p className={styles.description}>
-            Help us bring our project to life while making impact <br />
+            Help us bring our sponsored events to life while making impact <br />
             to the community at large.
           </p>
           <p className={styles.mobile_description}>
-            Help us bring our project to life while <br /> making impact to the
+            Help us bring our sponsored events to life while <br /> making impact to the
             community at large.
           </p>
           <Button

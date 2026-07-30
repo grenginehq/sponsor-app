@@ -66,7 +66,7 @@ export default function Sponsor() {
         </div>
         <div className={styles.sponsor_dashboard_main_container}>
           <div className={styles.sponsor_filters_container}>
-            <p className={styles.sponsor_filters_heading}>Filter Projects</p>
+            <p className={styles.sponsor_filters_heading}>Filter Sponsored Events</p>
             <div className={styles.sponsor_filters}>
               <div className={styles.sponsor_filters_accordion}>
                 <button
@@ -131,12 +131,12 @@ export default function Sponsor() {
             <div className={styles.sponsor_dashboard_main_header}>
               <div className={styles.sponsor_dashboard_main_heading_container}>
                 <h2 className={styles.sponsor_dashboard_main_heading}>
-                  Find a sponsored project
+                  Find a sponsored event
                 </h2>
                 <p
                   className={styles.sponsor_dashboard_main_heading_description}
                 >
-                  Help us bring our projects to life while making impact to the
+                  Help us bring our sponsored events to life while making impact to the
                   community at large.{" "}
                 </p>
               </div>

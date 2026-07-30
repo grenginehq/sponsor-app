@@ -117,15 +117,15 @@ export default function Home() {
           <div className={styles.project_top_container}>
             <div className={styles.project_text_container}>
               <h1 className={styles.project_text_container_heading}>
-                Start a sponsor project
+                Start a sponsored event
               </h1>
               <p className={styles.project_text_container_title}>
-                Make a difference by choosing a project to start with. Select a
-                project to get you started.
+                Make a difference by choosing a sponsored event to start with. Select a
+                sponsored event to get you started.
               </p>
               <p className={styles.project_text_container_mobile_title}>
-                Make a difference by choosing a project to start with. Select a
-                project to get you <br /> started.
+                Make a difference by choosing a sponsored event to start with. Select a
+                sponsored event to get you <br /> started.
               </p>
             </div>
             <div className={styles.project_button_container}>
