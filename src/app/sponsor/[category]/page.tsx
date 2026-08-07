@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { JSX, useEffect, useState } from "react";
 import { SecondStep } from "./SecondStep";
 import { useParams } from "next/navigation";
+import { Checkout } from "./Checkout";
 
 export default function SponsorCategory() {
   const params = useParams();
@@ -27,14 +28,14 @@ export default function SponsorCategory() {
     }
   }, [category, reset]);
 
-  const [activeScreen, setActiveScreen] = useState<"firstStep" | "secondStep">(
+  const [activeScreen, setActiveScreen] = useState<"firstStep" | "secondStep" | "checkout">(
     "firstStep",
   );
 
-  const handleScreenChange = (screen: "firstStep" | "secondStep") => {
+  const handleScreenChange = (screen: "firstStep" | "secondStep" | "checkout") => {
     setActiveScreen(screen);
   };
-  const screens: Record<"firstStep" | "secondStep", JSX.Element> = {
+  const screens: Record<"firstStep" | "secondStep" | "checkout", JSX.Element> = {
     firstStep: (
       <FirstStep control={control} handleScreenChange={handleScreenChange} />
     ),
@@ -45,6 +46,7 @@ export default function SponsorCategory() {
         handleScreenChange={handleScreenChange}
       />
     ),
+    checkout: <Checkout />
   };
 
   return (

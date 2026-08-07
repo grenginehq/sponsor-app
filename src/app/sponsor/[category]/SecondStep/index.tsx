@@ -7,16 +7,20 @@ import { Button } from "@/components/Button";
 
 interface SecondStepProps {
   control: Control<any>;
-  handleScreenChange: (screen: "firstStep" | "secondStep") => void;
+  handleScreenChange: (screen: "firstStep" | "secondStep" | "checkout") => void;
   handleSubmit: UseFormHandleSubmit<FieldValues, FieldValues>;
 }
 export const SecondStep = ({
   control,
   handleScreenChange,
 }: SecondStepProps) => {
+
+  const handleFormSubmit = () => {
+    handleScreenChange("checkout")
+  }
   return (
     <div className={styles.second_step}>
-      <form className={styles.second_step_form}>
+      <form onSubmit={handleFormSubmit} className={styles.second_step_form}>
         <Input
           variant="filled"
           type="number"

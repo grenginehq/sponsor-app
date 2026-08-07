@@ -8,7 +8,7 @@ import { Button } from "@/components/Button";
 
 interface FirstStepProps {
   control: Control<any>;
-  handleScreenChange: (screen: "firstStep" | "secondStep") => void;
+  handleScreenChange: (screen: "firstStep" | "secondStep" | "checkout") => void;
 }
 export const FirstStep = ({ control, handleScreenChange }: FirstStepProps) => {
   return (
