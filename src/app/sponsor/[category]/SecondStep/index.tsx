@@ -14,10 +14,9 @@ export const SecondStep = ({
   control,
   handleScreenChange,
 }: SecondStepProps) => {
-
   const handleFormSubmit = () => {
-    handleScreenChange("checkout")
-  }
+    handleScreenChange("checkout");
+  };
   return (
     <div className={styles.second_step}>
       <form onSubmit={handleFormSubmit} className={styles.second_step_form}>

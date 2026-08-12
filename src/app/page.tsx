@@ -13,6 +13,7 @@ import { useMemo } from "react";
 import Logos from "@/components/Logos";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/navigation";
 
 const smoothTransition = {
   type: "tween",
@@ -72,6 +73,12 @@ const cardVariants = {
 } as const;
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push("/sponsor");
+  };
+  
   return (
     <div className={styles.main_container}>
       <Header />
@@ -120,16 +127,16 @@ export default function Home() {
                 Start a sponsored event
               </h1>
               <p className={styles.project_text_container_title}>
-                Make a difference by choosing a sponsored event to start with. Select a
-                sponsored event to get you started.
+                Make a difference by choosing a sponsored event to start with.
+                Select a sponsored event to get you started.
               </p>
               <p className={styles.project_text_container_mobile_title}>
-                Make a difference by choosing a sponsored event to start with. Select a
-                sponsored event to get you <br /> started.
+                Make a difference by choosing a sponsored event to start with.
+                Select a sponsored event to get you <br /> started.
               </p>
             </div>
             <div className={styles.project_button_container}>
-              <Button type="button" variant="primary">
+              <Button handleClick={handleNavigation} type="button" variant="primary">
                 Donate Now
               </Button>
             </div>
@@ -150,6 +157,7 @@ export default function Home() {
                   scale: 1.03,
                   y: -4,
                 }}
+                onClick={handleNavigation}
               >
                 <Icon icon={projectCategory.icon as IconNames} />
                 {projectCategory.label}

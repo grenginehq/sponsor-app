@@ -7,14 +7,20 @@ import Search from "@/components/Search";
 import { SponsorCard } from "@/components/SponsorCard";
 import { events, projectCategories } from "@/constants";
 import Image from "next/image";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import styles from "./page.module.css";
-
+const ITEMS_PER_PAGE = 5
 export default function Sponsor() {
   const [isExpanded, setIsExpanded] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = events.length;
+  const paginatedEvents = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return events.slice(
+      startIndex,
+      startIndex + ITEMS_PER_PAGE,
+    );
+  }, [events, currentPage, ITEMS_PER_PAGE]);
   const { control, setValue } = useForm({
     defaultValues: {
       categories: [] as string[],
@@ -165,13 +171,14 @@ export default function Sponsor() {
             </div>
 
             <div className={styles.sponsor_dashboard_main_grid}>
-              {events?.map((event, index) => {
+              {paginatedEvents?.map((event, index) => {
                 return <SponsorCard key={`event_${index + 1}`} event={event} />;
               })}
             </div>
             <Pagination
               currentPage={currentPage}
-              totalCount={totalPages}
+              totalCount={events.length}
+              pageSize={ITEMS_PER_PAGE}
               siblingCount={1}
               boundaryCount={1}
               onPageChange={(page) => setCurrentPage(page)}

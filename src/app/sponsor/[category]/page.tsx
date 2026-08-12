@@ -28,26 +28,29 @@ export default function SponsorCategory() {
     }
   }, [category, reset]);
 
-  const [activeScreen, setActiveScreen] = useState<"firstStep" | "secondStep" | "checkout">(
-    "firstStep",
-  );
+  const [activeScreen, setActiveScreen] = useState<
+    "firstStep" | "secondStep" | "checkout"
+  >("firstStep");
 
-  const handleScreenChange = (screen: "firstStep" | "secondStep" | "checkout") => {
+  const handleScreenChange = (
+    screen: "firstStep" | "secondStep" | "checkout",
+  ) => {
     setActiveScreen(screen);
   };
-  const screens: Record<"firstStep" | "secondStep" | "checkout", JSX.Element> = {
-    firstStep: (
-      <FirstStep control={control} handleScreenChange={handleScreenChange} />
-    ),
-    secondStep: (
-      <SecondStep
-        handleSubmit={handleSubmit}
-        control={control}
-        handleScreenChange={handleScreenChange}
-      />
-    ),
-    checkout: <Checkout />
-  };
+  const screens: Record<"firstStep" | "secondStep" | "checkout", JSX.Element> =
+    {
+      firstStep: (
+        <FirstStep control={control} handleScreenChange={handleScreenChange} />
+      ),
+      secondStep: (
+        <SecondStep
+          handleSubmit={handleSubmit}
+          control={control}
+          handleScreenChange={handleScreenChange}
+        />
+      ),
+      checkout: <Checkout />,
+    };
 
   return (
     <div className={styles.sponsor_category}>

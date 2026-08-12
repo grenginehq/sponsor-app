@@ -1,7 +1,9 @@
-import {Elements, PaymentElement} from '@stripe/react-stripe-js';
-import {loadStripe} from '@stripe/stripe-js';
+import { Elements, PaymentElement } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!,
+);
 
 export const Checkout = () => {
   const options = {
@@ -11,10 +13,9 @@ export const Checkout = () => {
   return (
     <Elements stripe={stripePromise} options={options}>
       <form>
-      <PaymentElement />
-      <button>Submit</button>
-    </form>
+        <PaymentElement />
+        <button>Submit</button>
+      </form>
     </Elements>
   );
 };
-
